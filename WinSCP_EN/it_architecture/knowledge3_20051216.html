@@ -1,0 +1,432 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BPM Enterprise Personnel Lifecycle Management</title>
+<style type="text/css">
+<!--
+@import url("../Images_button/menu6.css");
+
+@import url("../Images_button/menu4.css");
+
+@import url("../Images_button/menu3.css");
+
+@import url("../Images_button/menu2.css");
+
+@import url("../Images_button/menu1.css");
+
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+body {
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+a:hover {
+	text-decoration: none;
+	color: #999999;
+}
+a:active {
+	text-decoration: none;
+	color: #666666;
+}
+h1 {
+	font-size: 16px;
+	color: #003399;
+}
+h2 {
+	font-size: 12px;
+	color: #003399;
+}
+h3 {
+	font-size: 12px;
+	color: #FF9933;
+}
+h4 {
+	font-size: 10px;
+	color: #666666;
+}
+h5 {
+	font-size: 10px;
+	color: #FF0000;
+}
+.T6 {
+	color: #666666
+}
+
+.style1 {color: #ffffff}
+
+a.style1:link{color:#ffffff;}
+	
+a.style1:visited{color:#ffffff;}
+	
+a.style1:hover{color:#ffffff;}
+	
+a.style1:active{color:#ffffff;}
+
+	
+
+	
+
+	
+
+	
+
+	
+
+-->
+</style>
+<script language="JavaScript1.2" type="text/javascript" src="../Images_button/mm_css_menu.js"></script>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('../Images_button/menu7_f3.gif','../Images_button/menu7_f2.gif','../Images_button/menu7_f4.gif','../Images_button/menu1_f3.gif','../Images_button/menu1_f2.gif','../Images_button/menu1_f4.gif','../Images_button/menu2_f3.gif','../Images_button/menu2_f2.gif','../Images_button/menu2_f4.gif','../Images_button/menu3_f3.gif','../Images_button/menu3_f2.gif','../Images_button/menu3_f4.gif','../Images_button/menu4_f3.gif','../Images_button/menu4_f2.gif','../Images_button/menu4_f4.gif','../Images_button/menu5_f3.gif','../Images_button/menu5_f2.gif','../Images_button/menu5_f4.gif','../Images_button/menu6_f3.gif','../Images_button/menu6_f2.gif','../Images_button/menu6_f4.gif')">
+<table width="895" border="0" align="center" cellpadding="2" cellspacing="1">
+  <tr>
+    <td colspan="2" valign="top"><div align="center"><table width="890" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="160" height="100" rowspan="2"><a href="../index.html" target="_self"><img src="../Images_button/logo(160x95px).png" width="160" height="100" border="0" /></a></td>
+        <td height="78" colspan="7"><img src="../Images_button/w_790x100.png" width="730" height="81" border="0" usemap="#Map" /></td>
+      </tr>
+      <tr>
+        <td width="90" height="22" background="Images_button/m1.gif"><a href="http://www.abovee.com/englishweb_new/index.html" target="_self" onmouseout="MM_nbGroup('out');" onmouseover="MM_nbGroup('over','menu7','../Images_button/menu7_f2.gif','../Images_button/menu7_f4.gif',1);" onclick="MM_nbGroup('down','navbar1','menu7','../Images_button/menu7_f3.gif',1);"><img name="menu7" src="../Images_button/menu7.gif" width="90" height="22" border="0" id="menu7" alt="" /></a></td>
+      <td width="100" background="Images_button/m1.gif"><div id="FWTableContainer1379147169"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu1','../Images_button/menu1_f3.gif',1);" onmouseover="MM_nbGroup('over','menu1','../Images_button/menu1_f2.gif','../Images_button/menu1_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu1" src="../Images_button/menu1.gif" width="100" height="22" border="0" id="menu1" usemap="#m_menu1" alt="" /></a>
+              <map name="m_menu1" id="m_menu1">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="bpmproduct1.html" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1130101326_0', 'MMMenu1130101326_0',0,23,'menu1');"  />
+              </map>
+              <div id="MMMenuContainer1130101326_0">
+                <div id="MMMenu1130101326_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="bpmproduct2.html" target="_self" id="MMMenu1130101326_0_Item_0" class="MMMIFVStyleMMMenu1130101326_0" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0','1');"> <span class="MMMenuItemSpanMMMenu1130101326_0">Power&nbsp;Process&nbsp;BPM&nbsp;Suite</span> <img src="../Images_button/arrows.gif" alt="" name="undefined_2" width="8" height="8" class="MMArrowStyleMMMenu1130101326_0" id="undefined_2" /> </a> <a href="bpmproduct3.html" target="_self" id="MMMenu1130101326_0_Item_1" class="MMMIVStyleMMMenu1130101326_0" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0','2');"> <span class="MMMenuItemSpanMMMenu1130101326_0">Power&nbsp;Link</span> <img src="../Images_button/arrows.gif" alt="" name="undefined_2" width="8" height="8" class="MMArrowStyleMMMenu1130101326_0" id="undefined_2" /> </a> <a href="bpmproduct4.html" target="_self" id="MMMenu1130101326_0_Item_2" class="MMMIVStyleMMMenu1130101326_0" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0');"> eFDoc </a> </div>
+                <div id="MMMenu1130101326_0_1" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="bpmproduct2-1.html" target="_self" id="MMMenu1130101326_0_1_Item_0" class="MMMIFVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> Power&nbsp;Process&nbsp;BPM </a> <a href="bpmproduct2-2.html" target="_self" id="MMMenu1130101326_0_1_Item_1" class="MMMIVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> Power&nbsp;webForm </a> <a href="bpmproduct2-3.html" target="_self" id="MMMenu1130101326_0_1_Item_2" class="MMMIVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> SignFlow&nbsp;for&nbsp;Power&nbsp;Process </a> <a href="bpmproduct2-4.html" target="_self" id="MMMenu1130101326_0_1_Item_3" class="MMMIVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> Enterprise&nbsp;Manager </a> <a href="bpmproduct2-5.html" target="_self" id="MMMenu1130101326_0_1_Item_4" class="MMMIVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> Portlets&nbsp;for&nbsp;Portal </a> </div>
+                <div id="MMMenu1130101326_0_2" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="bpmproduct3-1.html" target="_self" id="MMMenu1130101326_0_2_Item_0" class="MMMIFVStyleMMMenu1130101326_0_2" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_2');"> Power&nbsp;Link&nbsp;on&nbsp;Demand </a> </div>
+              </div>
+        </div></td>
+        <td width="100" background="Images_button/m1.gif"><div id="FWTableContainer1371397121"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu2','../Images_button/menu2_f3.gif',1);" onmouseover="MM_nbGroup('over','menu2','../Images_button/menu2_f2.gif','../Images_button/menu2_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu2" src="../Images_button/menu2.gif" width="100" height="22" border="0" id="menu2" usemap="#m_menu2" alt="" /></a>
+              <map name="m_menu2" id="m_menu2">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="solutions.html" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1109144100_0', 'MMMenu1109144100_0',0,23,'menu2');"  />
+              </map>
+              <div id="MMMenuContainer1109144100_0">
+                <div id="MMMenu1109144100_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="solutions2.html" target="_self" id="MMMenu1109144100_0_Item_0" class="MMMIFVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Inventory&nbsp;Management&nbsp;Solution </a> <a href="solutions3.html" target="_self" id="MMMenu1109144100_0_Item_1" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Human&nbsp;Resource&nbsp;Management&nbsp;Solution </a> <a href="solutions4.html" target="_self" id="MMMenu1109144100_0_Item_2" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> B2B&nbsp;Message&nbsp;Exchange&nbsp;Management&nbsp;Solution </a> <a href="solutions6.html" target="_self" id="MMMenu1109144100_0_Item_3" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Purchase&nbsp;Order&nbsp;and&nbsp;Request&nbsp;Management&nbsp;Solution </a> <a href="solutions5.html" target="_self" id="MMMenu1109144100_0_Item_4" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Office&nbsp;Automation&nbsp;Solution </a> <a href="solutions7.html" target="_self" id="MMMenu1109144100_0_Item_5" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Integrated&nbsp;Online&nbsp;Application&nbsp;Services&nbsp;Solution </a> </div>
+              </div>
+        </div></td>
+       <td width="100" background="Images_button/m1.gif"><div id="FWTableContainer1608763796"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu3','../Images_button/menu3_f3.gif',1);" onmouseover="MM_nbGroup('over','menu3','../Images_button/menu3_f2.gif','../Images_button/menu3_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu3" src="../Images_button/menu3.gif" width="100" height="22" border="0" id="menu3" usemap="#m_menu3" alt="" /></a>
+              <map name="m_menu3" id="m_menu3">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="callcenter.html" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1109144646_0', 'MMMenu1109144646_0',0,23,'menu3');"  />
+              </map>
+              <div id="MMMenuContainer1109144646_0">
+                <div id="MMMenu1109144646_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="callcenter3.html" target="_self" id="MMMenu1109144646_0_Item_0" class="MMMIFVStyleMMMenu1109144646_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144646_0');"> Product&nbsp;Services </a> <a href="callcenter4.html" target="_self" id="MMMenu1109144646_0_Item_1" class="MMMIVStyleMMMenu1109144646_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144646_0');"> Project&nbsp;Services </a> <a href="callcenter2.html" target="_self" id="MMMenu1109144646_0_Item_2" class="MMMIVStyleMMMenu1109144646_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144646_0');"> Training&nbsp;Courses </a> </div>
+              </div>
+        </div></td>
+        <td width="100" background="Images_button/m1.gif"><div id="FWTableContainer679106656"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu4','../Images_button/menu4_f3.gif',1);" onmouseover="MM_nbGroup('over','menu4','../Images_button/menu4_f2.gif','../Images_button/menu4_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu4" src="../Images_button/menu4.gif" width="100" height="22" border="0" id="menu4" usemap="#m_menu4" alt="" /></a>
+              <map name="m_menu4" id="m_menu4">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="supports.html" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1109144931_0', 'MMMenu1109144931_0',0,23,'menu4');"  />
+              </map>
+              <div id="MMMenuContainer1109144931_0">
+                <div id="MMMenu1109144931_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="supports2.html" target="_self" id="MMMenu1109144931_0_Item_0" class="MMMIFVStyleMMMenu1109144931_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144931_0');"> Online&nbsp;Support&nbsp;Center </a> <a href="knowledge.html" target="_self" id="MMMenu1109144931_0_Item_1" class="MMMIVStyleMMMenu1109144931_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144931_0');"> BPM&nbsp;Knowleagebase </a> <a href="download.html" target="_self" id="MMMenu1109144931_0_Item_2" class="MMMIVStyleMMMenu1109144931_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144931_0');"> Download </a> </div>
+              </div>
+        </div></td>
+        <td width="140" background="Images_button/m1.gif"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu5','../Images_button/menu5_f3.gif',1);" onmouseover="MM_nbGroup('over','menu5','../Images_button/menu5_f2.gif','../Images_button/menu5_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu5" src="../Images_button/menu5.gif" width="140" height="22" border="0" id="menu5" usemap="#m_menu5" alt="" /></a>
+          <map name="m_menu5" id="m_menu5">
+            <area shape="poly" coords="0,0,140,0,140,22,0,22,0,0" href="case.html" target="_self" alt="" onmouseout="MM_nbGroup('out');"  onmouseover="MM_nbGroup('over','menu5','../Images_button/menu5_f2.gif','../Images_button/menu5_f4.gif',1);"  onclick="MM_nbGroup('down','navbar1','menu5','../Images_button/menu5_f3.gif',1);"  />
+          </map></td>
+        <td width="95" background="Images_button/m1.gif"><div id="FWTableContainer527474741"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu6','../Images_button/menu6_f3.gif',1);" onmouseover="MM_nbGroup('over','menu6','../Images_button/menu6_f2.gif','../Images_button/menu6_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu6" src="../Images_button/menu6.gif" width="100" height="22" border="0" id="menu6" usemap="#m_menu6" alt="" /></a>
+              <map name="m_menu6" id="m_menu6">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="abovee1.heml" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1109150254_0', 'MMMenu1109150254_0',0,23,'menu6');"  />
+              </map>
+              <div id="MMMenuContainer1109150254_0">
+                <div id="MMMenu1109150254_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="abovee6.html" target="_self" id="MMMenu1109150254_0_Item_0" class="MMMIFVStyleMMMenu1109150254_0" onmouseover="MM_menuOverMenuItem('MMMenu1109150254_0');"> Partners </a> <a href="../abovee7.html" target="_self" id="MMMenu1109150254_0_Item_1" class="MMMIVStyleMMMenu1109150254_0" onmouseover="MM_menuOverMenuItem('MMMenu1109150254_0');"> Contact&nbsp;Us </a> </div>
+              </div>
+        </div></td>
+      </tr>
+    </table>
+        <map name="logoMap" id="logoMap">
+          <area shape="rect" coords="863,74,880,87" href="http://www.abovee.com/englishweb/index.htm" target="_self" />
+          <area shape="rect" coords="843,74,859,87" href="http://www.abovee.com/web/guest/abovee" target="_blank" />
+          <area shape="rect" coords="822,74,841,86" href="http://www.abovee.com/web/guest/abovee" target="_blank" />
+          </map>
+    </div>
+      <map name="logoMap" id="logoMap">
+        <area shape="rect" coords="863,73,880,86" href="http://www.abovee.com/englishweb/index.htm" target="_self" />
+        <area shape="rect" coords="845,73,861,86" href="http://www.abovee.com/web/guest/abovee" target="_blank" />
+        <area shape="rect" coords="823,74,842,86" href="http://www.abovee.com/web/guest/abovee" target="_blank" />
+      </map>    </td>
+  </tr>
+
+  <tr>
+    <td width="665" valign="top">&nbsp;</td>
+    <td width="222" rowspan="2" valign="top"><table width="218" border="0" cellpadding="0" cellspacing="1">
+      <tr>
+        <td height="17" colspan="2" valign="top"><p>&nbsp;</p></td>
+      </tr>
+      
+      <tr>
+        <td height="12" colspan="2" valign="top"><table width="218" border="0" cellspacing="0" cellpadding="2">
+          <tr>
+            <td><a href="../knowledge1_2007.html" target="_self"><img src="../Images_button/b_e09.png" alt="" name="button_2" width="220" height="33" hspace="5" vspace="10" border="0" id="button_2"  /></a></td>
+          </tr>
+          <tr>
+            <td><img src="../Images_button/b_e10.png" alt="" width="220" height="33" hspace="5" vspace="10" border="0" align="top" /></td>
+          </tr>
+        </table></td>
+        </tr>
+      <tr>
+        <td width="80" height="10" valign="top"><div align="left" class="T6">[2005-12-16]</div></td>
+        <td width="137" height="12" valign="top"><a href="knowledge/knowledge2007417.html"></a></td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><div align="left"><a href="knowledge3_20061014.html" class="T6">When Modern BPM Meets SOA </a></div></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top"><div align="center"></div></td>
+        <td width="137" height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" valign="top"><span class="T6">[2005-09-12]</span></td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><a href="knowledge3_20050912.html">Business Process Management (BPM) will   Integrate BI Applications </a></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">&nbsp;</td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" valign="top"><span class="T6">[2005-01-12]</span></td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><a href="knowledge3_20050112.html">The Effect of SOA on Information   Systems </a></td>
+      </tr>
+    </table>
+      <br />
+      <div align="right" class="T6"><a href="../knowledge3_2007.html""" target="_self">2007</a> | <a href="../knowledge3_2006.html"" target="_self">2006</a> | <a href="../knowledge3_2005.html"" target="_self">2005</a><br />
+      </div>
+      <br />
+      <table width="218" border="0" align="left" cellpadding="2" cellspacing="0">
+        
+        <tr>
+          <td><a href="../knowledge4_2006.html"" target="_self"><img src="http://www.abovee.com/image/image_gallery?uuid=a9838701-26c5-4839-91b5-68676c7618d9&amp;groupId=10128&amp;t=1290398992871" width="220" height="34" hspace="5" vspace="10" border="0" align="top" /></a></td>
+        </tr>
+        <tr>
+          <td><a href="/knowledge2_2006.html"" target="_self"><img src="http://www.abovee.com/image/image_gallery?uuid=093621e6-b1d0-479d-91b4-e65eb6f1331b&amp;groupId=10128&amp;t=1290398999946" width="220" height="34" hspace="5" vspace="10" border="0" /></a></td>
+        </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="600" border="0" align="center" cellpadding="0" cellspacing="0">
+      
+      
+      <tr>
+        <td><div align="left">
+          <h1><strong>BPM Enterprise Personnel Lifecycle Management </strong></h1>
+        </div>        </td>
+      </tr>
+      <tr>
+        <td valign="top"><h4>Originally Published in the Special Issue of iThome Software Technology   Application 2005/12/16 By NIU, Tengwei, Project Manager of AboveE</h4></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr>
+        <td>Basing strategic management goals enables enterprises to have a   brighter future. BPM provides a strategic application value in managing   personnel lifecycle management. </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>The digital economy has resulting in demands on organizations   that are without precedent: need to be quick and make flexible adjustments to   respond to market changes. This chain reaction has also effected the management   and strategic use of human resources within enterprises. Most of the   manufacturing operations encountered by the author have operations within Taiwan   , Hong Kong, and Mainland China . To adjust to external changes, enterprises   have had to make more frequent strategic adjustments to organizational personnel   to enable to enterprises in meeting its objectives. 。 </td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td><h2 align="left">Utilizing BPM to Solve the Problem of Managing Personnel   Lifecycles </h2></td>
+      </tr>
+      <tr>
+        <td class="T6"><p align="justify">The execution structure of organizational restructuring first   starts with planning the vision and strategy as the basis for allocating   resources and a direction to work towards by all members of the organization.   Then through new strategies, by applying the 4 Rs: Re-position (repositioning of   enterprise), Re-structure (adjusting the organizational structure), Re-system   (adjusting the process and management mechanism) and Re-vitalization (adjusting   the organizational culture), to conduct organizational transformation. This is   the main part of organizational transformation. </p>          </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">At the same time, through the BPM system and establishment of   processes, senior management can now more effectively analyze information and   through the development of human resource assets to successfully convert   thinking patterns and energizing the organization that would achieve the goal of   increasing enterprise competitiveness. As mentioned by Jim Collins, author of   “from A to A+”, the strategy of outstanding enterprises is to continuously   infuse the company with new talent and eliminate unsuitable personnel so the   enterprise can develop a bright future and find its new direction, new vision,   and new strategy. Therefore in an information age, enterprises must transform   human resource management processes to electronic processes. Only after   digitizing the information of people would it be possible to develop and utilize   human resources and to strengthen the value of human productivity. In other   words, the mission of human resource departments must expand from just routine   work, such as recording absence, and calculating and distributing salary, to   being able to maintain up-to-date and timely information about personnel. This   information can then be applied and circulated with enterprise competitive   strategy. The largest challenge facing these changes is how to use the least   amount of resources to complete more work and using the complete and analyzed   information as basis to plan human resource strategy. Therefore, enterprise   personnel lifecycle management has become more important and after analysis   consists of the following: management of the human resource budget, application   to increase or decrease personnel, recruiting personnel, hiring of personnel,   evaluation of personnel during the trial period, personnel adjustments, leave   without pay, and termination application processes. Aside from maintaining basic   employee information, information should be maintained on the company assets   held by each personnel, system access rights must also be adjusted when there   are personnel adjustments, and must need to synchronize data other companies.   There may also even be need to generate strategic information reports to satisfy   the needs of senior management. </p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><h2 align="left">Traditional Workflow Solution </h2></td>
+      </tr>
+      <tr>
+        <td><div align="justify" class="T6">Since enterprise personnel lifecycle management consists of   many processes that need to be managed. If documents are transferred by hand, it   would waste time and energy, as well as not being able to track the status of   the documents. The Workflow solution can provide an electronic document solution   as well as an authorization and management mechanism to meet the basic needs of   electronic process solutions. </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">Using the management human resource budgeting and applications   to increase or decrease human resources. The logic of the process can be   designed using WorkFlow design tools to plan the authorization process needed   and represent it in a graphical format. If needed, the processor can dynamically   modify the signing process. </p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">The processes used in these forms may be simple or complex.   Traditional WorksFlow design tools, uses documents as the core concept to apply   to the design of processes. It can even use field value as the selection   condition in process design. The emphasis is on coordination of personnel   involved and transmitting documents. Other powerful document attachment features   are included to supplement the needs of the form, while the system architecture   is based on Fat Client architecture to develop a powerful controllable   application program. Advanced WorkFlow can provide a web based design to allow   processing of documents anywhere and not just restricted to the Intranet. To   meet the requirements of this rapidly changing environment, version management   of forms, version management of organizational diagrams, deputy/agent personnel,   reminder of deadlines, handling missed deadlines, and process tracking. In   managing personnel lifecycles, the WorkFlow solution can provide a good method   for each application and approval process. </p></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td><h2 align="left">Problems Faced by Traditional WorkFlow </h2></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">In managing enterprise personnel lifecycles, the WorkFlow   solution is faced with a bottleneck. When human resource requests that were   proposed are approved, the human resource department needs to search for   candidates in job banks and recruiting systems based on the information on the   human resource requests, then arranging interviews. After that, there are a   series of interview and evaluation processes. The WorkFlow solution does not   support integration with other systems from job banks, recruiting systems, or   any other external system. Therefore, the information and process cannot be   linked from start to end. This reflects the fact that the WorkFlow system   emphasizes on document exchanges and not information exchanges. </p></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">In complex business environments, WorkFlow often does not have   the ability to process unexpected events and is difficult to track the changes   made to the document during the process. The document data does not support   quick search and analysis; therefore, the course of the process cannot be   accumulated and cannot be used in the future to analyze efficiency. </p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div align="justify" class="T6">
+          <p>From an information technology point of view, the following   diagram can explain the difference between WorkFlow and the currently most   popular BPM. WorkFlow only provides P2P capabilities while BPM provides strong   integration abilities such as the coordination of the A 2A   (Application-to-Application), P2P (People-to-People), A2P   (Application-to-People) and P 2A (People-to- Application) features. </p>
+        </div></td>
+      </tr>
+      <tr>
+        <td><h2>&nbsp;</h2></td>
+      </tr>
+      <tr>
+        <td><div align="left">
+          <h2>The BPM Solution </h2>
+        </div></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">When faced with enterprise personnel lifecycle management, the   BPM solution provides a complete process based on business procedures that can   completely solve the deficiencies in WorkFlow. </p></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">BPM architecture is based on data and control. It focuses on   the information needed to complete the tasks and creating information after the   task is completed. One of the specialties of BPM is that processes can consist   of joint operations; a process can be inserted into another process, effectively   becoming the child process of another process. While managing enterprise   personnel life cycles, termination, and leave without pay process all includes a   process to transfer current tasks to other personnel. Also, BPM can integrate   various interfaces, such as the personnel interview personnel can exchange   information with systems from external job banks under the SOA, making BPM a   reusable integration tool. </p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">BPM system contact points can be extended to the initiator of   needs, starting from the generation of information, management control and   tracking is also started to reduce human error. Using the diagram below as an   example, the BPM and portal are integrated, forming an information source   gateway. For the average user, this makes it easier to obtain information as   defined by access rights to be divided. Also, the BPM process and information   being transferred is stored in the data. Therefore, it can support future   benefit analysis and integrate information from existing information assets   while re-enforcing approval information contents. When comparing object   orientation and WorkFlow, when BPM is applied to the web, information   integration can be integrated with the web in a relative easy manner so that   information needed to make the decision appears immediately while reducing the   need for attachments while the inability to search in documents for the required   information. Though time management, work order notice, reminders, and   escalation methods. So employees cannot neglect the work needed making processes   traceable with no problems. </p></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">&nbsp;</p></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">With the properties of BPM, deploying enterprise personnel   lifecycle management, can not only meet the needs of the enterprise, it can also   provides flexible process architecture, reducing the changes in process   operations, and time needed for system changes, quickly reflecting the needs of   the enterprise and not the enterprise having to adapt to the system. This a   solution based entirely on the business process logic of the enterprise. </p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><h2 align="left">Human Resource Asset Needs Leads BPM </h2></td>
+      </tr>
+      <tr>
+        <td><p align="justify" class="T6">In today's knowledge economy, enterprise human resource   structures have had to make obvious changes, with knowledge workers comprising   an increasing portion of the total workforce of organizations. The main assets   of enterprises that traditionally included land, machine, and material are   changing to include human resource assets comprised of knowledge workers. The   degree of individual wisdom of knowledge workers being converted assets of the   organization determines the competitive strength of enterprise. Faced with a   challenging business environment, this article shares a BPM solution deployed on   a SOA and Web Services technologies. It is hoped that it can provide HR and IR   management the use of ITS information tools to asset the management of employee   lifecycles rather than the traditional WorkFlow methodology. </p></td>
+      </tr>
+    </table></td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+<td colspan="2" background="../Images_button/890x16.png"><table width="880" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div align="left"><span class="style1" style="text-align: left">Copyright 2000-2011 AboveE Technology Inc., All rights reserved.</span></div></td>
+        <td><div align="right" class="style1"><a href="../index.html" target="_self">Home</a> | <a href="abovee7.html" target="_self" class="style1">Contact Us</a> |<a href="callcenter2.html" target="_self" class="style1"> Training</a></span></div></td>
+  </tr>
+    </table></td>
+  </tr>
+</table>
+<div align="left"></div>
+
+<div align="left"></div>
+
+<map name="Map" id="Map">
+  <area shape="rect" coords="704,65,718,76" href="http://www.abovee.com/englishweb_new/index.html" target="_self" />
+<area shape="rect" coords="683,62,699,73" href="http://www.abovee.com/zh_CN/web/guest/abovee" target="_self" />
+<area shape="rect" coords="665,65,680,76" href="http://www.abovee.com/web/guest/abovee" target="_self" />
+</map></body>
+</html>
+
+</body>
+</html>

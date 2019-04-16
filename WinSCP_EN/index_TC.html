@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>~ 歡迎蒞臨 超義科技 ~</title>
+<style type="text/css">
+<!--
+
+body, td, th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+body {
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+a:hover {
+	text-decoration: none;
+	color: #999999;
+}
+a:active {
+	text-decoration: none;
+	color: #666666;
+}
+h1 {
+	font-size: 16px;
+	color: #003399;
+}
+h2 {
+	font-size: 12px;
+	color: #003399;
+}
+h3 {
+	font-size: 12px;
+	color: #FF9933;
+}
+h4 {
+	font-size: 10px;
+	color: #666666;
+}
+h5 {
+	font-size: 10px;
+	color: #FF0000;
+}
+.style1 {color: #ffffff}
+
+a.style1:link{color:#ffffff;}
+	
+a.style1:visited{color:#ffffff;}
+	
+a.style1:hover{color:#ffffff;}
+	
+a.style1:active{color:#ffffff;}
+
+.T6 {
+	color: #666666
+}
+.style6 {
+	color: #666666;
+	font-size: 8px;
+}
+.style7 {
+	font-size: 10px
+}
+#main-banner {
+	float:left;
+	width:630px;
+	height:240px;
+	margin:0px 0px 7px 0px;
+	position:relative;
+}
+#main-banner ul, #main-banner li {
+	padding:3px;
+	margin:0px;
+	list-style:none;
+}
+#main-banner ul.banners li {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+#main-banner a img {
+	border:0px;
+}
+#main-banner a embed {
+	border:0px;
+}
+#main-banner ul.paging {
+	float:left;
+	position:absolute;
+	bottom:0px;
+	left:20px;
+	height:20px;
+}
+#main-banner ul.paging li {
+	float:left;
+	position:relative;
+}
+
+-->
+</style>
+<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script language="JavaScript1.2" type="text/javascript" src="Images_button/mm_css_menu.js"></script>
+</head>
+<body>
+<table width="630" border="0" align="center" cellpadding="2" cellspacing="1">
+  <tr>
+    <td width="630" height="240" colspan="2">
+	<script language="JavaScript" src="js/jquery-1.4.2.min.js"></script>
+    <script language="Javascript" type="text/javascript"> 
+	var MBtimeoutLength =5* 1000;
+	var MBtimeoutID = 0;
+	var MBpagingCount = 0; // Starts at 1
+	var MBtotalCount = 0;  // Starts at 1
+	var j4 = jQuery.noConflict();
+
+	j4(document).ready(function() {
+		j4('#main-banner').append('<ul class="paging"></ul>');
+		j4('#main-banner img, #main-banner embed').each(function() {
+			MBpagingCount++;
+			j4('#main-banner ul.paging').append('<li><img src="2011_TC/no' + MBpagingCount + '-1.jpg" onMouseOver="javascript:gotoMB(' + MBpagingCount + ', true);"></li>');
+			if (MBpagingCount == 1) {
+				j4('#main-banner ul.banners li').eq(MBpagingCount - 1).fadeIn();
+				j4('#main-banner ul.paging li').eq(MBpagingCount - 1).html('<img src="2011_TC/no' + MBpagingCount +'-2.jpg"  onMouseOut="javascript:rotateMB(true);">');
+			}
+			swfPos = j4(this).attr('src').indexOf('.swf');
+			if (swfPos > 0) {
+			swfSrc = j4(this).attr('src').replace('.swf', '');
+			j4(this).parent('a').parent('li').html(eval("AC_FL_RunContent('codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0', " +
+                 "     'width','630', " +
+                 "     'height','240', " +
+                 "     'movie','" + swfSrc + "', " +
+                 "     'wmode','transparent', " +
+                 "     'menu','false', " +
+                 "     'quality','high', " +
+                 "     'allowScriptAccess','always');"));
+			}
+		});
+		MBtotalCount = MBpagingCount;
+		if (MBtotalCount >= 2) {
+			MBpagingCount = 2;
+			MBtimeoutID = setTimeout('rotateMB(false)', MBtimeoutLength);
+		}
+	});
+	
+	function rotateMB(needWait) {
+		if(needWait && MBtotalCount >= 2) {
+			clearTimeout(MBtimeoutID);
+			MBtimeoutID = setTimeout('gotoMB(' + MBpagingCount + ', false)', MBtimeoutLength);
+		} else 
+			gotoMB(MBpagingCount, false);
+	}
+
+	function gotoMB(num, stopRotate) {
+		var richcontent =j4('#main-banner ul.banners li').eq(num - 1).html();
+		var pageCount = 1;
+
+		clearTimeout(MBtimeoutID);
+		j4('#main-banner ul.banners li').fadeOut();
+		j4('#main-banner ul.banners li').eq(num - 1).html('');
+		j4('#main-banner ul.banners li').eq(num - 1).html(richcontent);
+		j4('#main-banner ul.banners li').eq(num - 1).fadeIn();
+		j4('#main-banner ul.paging li').each(function() {
+			if(pageCount == num) {
+				j4('#main-banner ul.paging li').eq(pageCount - 1).html('<img src="2011_TC/no' + pageCount +'-1.jpg"  onMouseOut="javascript:rotateMB(true);">');
+			} else {
+				j4('#main-banner ul.paging li').eq(pageCount - 1).html('<img src="2011_TC/no' + pageCount +'-2.jpg" onMouseOver="javascript:gotoMB(' + pageCount + ', true);">');
+			}
+			pageCount++;
+		})
+		if ((num + 1) <= MBtotalCount) {
+			MBpagingCount = num + 1;
+		} else {
+			MBpagingCount = 1;
+		}
+		if(!stopRotate) {
+			if (MBtotalCount >= 2) {
+				MBtimeoutID = setTimeout('rotateMB(false)', MBtimeoutLength);
+			}
+		}
+	}
+</script>
+<div id="main-banner" style="z-index:20">
+  <ul class="banners">
+ <li> <a href="http://www.abovee.com/web/guest/bpmproduct2" title="" target="_top" onClick="
+  javascript:window.open('page1.html','_parent','','')"><img src="2011_TC/2011_TC-1.png" title="" alt=""></a></li>
+ <li> <a href="http://www.abovee.com/web/guest/bpmproduct6" title="" target="_top" onClick="
+  javascript:window.open('page2.html','_parent','','')"><img src="2011_TC/2011_TC-2.png" title="" alt=""></a></li> 
+ <li> <a href="http://www.abovee.com/web/guest/case" title="" target="_top" onClick="
+  javascript:window.open('page3.html','_parent','','')"><img src="2011_TC/2011_TC-3.png" title="" alt=""></a></li> 
+ <li> <a href="http://www.abovee.com/web/guest/callcenter2" title="" target="_top" onClick="
+  javascript:window.open('page4.html','_parent','','')"><img src="2011_TC/2011_TC-4.png" title="" alt=""></a></li>
+<li> <a href="http://www.abovee.com/web/guest/subscribe" title="" target="_top" onClick="
+  javascript:window.open('page5.html','_parent','','')"><img src="2011_TC/2011_TC-5.png" title="" alt=""></a></li>
+<!--
+ <li> <a href="http://www.abovee.com/englishweb_new/solutions5.html" title="" target="_self" onClick="
+  javascript:window.open('page5.html','_self','','')
+  "><img src="Images_button/BN_EN5.png" title="" alt=""></a></li>
+-->
+  </ul>
+</div></td>
+  </tr>
+</table>
+<div align="left"></div>
+</body>
+</html>

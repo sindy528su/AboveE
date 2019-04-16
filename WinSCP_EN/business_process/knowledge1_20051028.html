@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BPMN and BPEL</title>
+<style type="text/css">
+<!--
+@import url("../Images_button/menu6.css");
+
+@import url("../Images_button/menu4.css");
+
+@import url("../Images_button/menu3.css");
+
+@import url("../Images_button/menu2.css");
+
+@import url("../Images_button/menu1.css");
+
+body,td,th {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+body {
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+a {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #666666;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+a:hover {
+	text-decoration: none;
+	color: #999999;
+}
+a:active {
+	text-decoration: none;
+	color: #666666;
+}
+h1 {
+	font-size: 16px;
+	color: #003399;
+}
+h2 {
+	font-size: 12px;
+	color: #003399;
+}
+h3 {
+	font-size: 12px;
+	color: #FF9933;
+}
+h4 {
+	font-size: 10px;
+	color: #666666;
+}
+h5 {
+	font-size: 10px;
+	color: #FF0000;
+}
+.T6 {
+	color: #666666
+}
+
+.style1 {color: #ffffff}
+
+a.style1:link{color:#ffffff;}
+	
+a.style1:visited{color:#ffffff;}
+	
+a.style1:hover{color:#ffffff;}
+	
+a.style1:active{color:#ffffff;}
+
+	
+
+	
+
+	
+
+	
+
+	
+
+-->
+</style>
+<script language="JavaScript1.2" type="text/javascript" src="../Images_button/mm_css_menu.js"></script>
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v6.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : ((args[i+1])? args[i+1] : img.MM_up);
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    nbArr = document[grpName];
+    if (nbArr)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = (args[i+1])? args[i+1] : img.MM_up;
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('../Images_button/menu7_f3.gif','../Images_button/menu7_f2.gif','../Images_button/menu7_f4.gif','../Images_button/menu1_f3.gif','../Images_button/menu1_f2.gif','../Images_button/menu1_f4.gif','../Images_button/menu2_f3.gif','../Images_button/menu2_f2.gif','../Images_button/menu2_f4.gif','../Images_button/menu3_f3.gif','../Images_button/menu3_f2.gif','../Images_button/menu3_f4.gif','../Images_button/menu4_f3.gif','../Images_button/menu4_f2.gif','../Images_button/menu4_f4.gif','../Images_button/menu5_f3.gif','../Images_button/menu5_f2.gif','../Images_button/menu5_f4.gif','../Images_button/menu6_f3.gif','../Images_button/menu6_f2.gif','../Images_button/menu6_f4.gif')">
+<table width="895" border="0" align="center" cellpadding="2" cellspacing="1">
+  <tr>
+    <td colspan="2" valign="top"><div align="center"><table width="890" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="160" height="100" rowspan="2"><a href="../index.html" target="_self"><img src="../Images_button/logo(160x95px).png" width="160" height="100" border="0" /></a></td>
+        <td height="78" colspan="7"><img src="../Images_button/w_790x100.png" width="730" height="81" border="0" usemap="#Map" /></td>
+      </tr>
+      <tr>
+        <td width="90" height="22" background="Images_button/m1.gif"><a href="http://www.abovee.com/englishweb_new/index.html" target="_self" onmouseout="MM_nbGroup('out');" onmouseover="MM_nbGroup('over','menu7','../Images_button/menu7_f2.gif','../Images_button/menu7_f4.gif',1);" onclick="MM_nbGroup('down','navbar1','menu7','../Images_button/menu7_f3.gif',1);"><img name="menu7" src="../Images_button/menu7.gif" width="90" height="22" border="0" id="menu7" alt="" /></a></td>
+        <td width="100" background="Images_button/m1.gif"><div id="FWTableContainer1379147169"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu1','../Images_button/menu1_f3.gif',1);" onmouseover="MM_nbGroup('over','menu1','../Images_button/menu1_f2.gif','../Images_button/menu1_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu1" src="../Images_button/menu1.gif" width="100" height="22" border="0" id="menu1" usemap="#m_menu1" alt="" /></a>
+              <map name="m_menu1" id="m_menu1">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="bpmproduct1.html" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1130101326_0', 'MMMenu1130101326_0',0,23,'menu1');"  />
+              </map>
+              <div id="MMMenuContainer1130101326_0">
+                <div id="MMMenu1130101326_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="bpmproduct2.html" target="_self" id="MMMenu1130101326_0_Item_0" class="MMMIFVStyleMMMenu1130101326_0" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0','1');"> <span class="MMMenuItemSpanMMMenu1130101326_0">Power&nbsp;Process&nbsp;BPM&nbsp;Suite</span> <img src="../Images_button/arrows.gif" alt="" name="undefined_2" width="8" height="8" class="MMArrowStyleMMMenu1130101326_0" id="undefined_2" /> </a> <a href="bpmproduct3.html" target="_self" id="MMMenu1130101326_0_Item_1" class="MMMIVStyleMMMenu1130101326_0" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0','2');"> <span class="MMMenuItemSpanMMMenu1130101326_0">Power&nbsp;Link</span> <img src="../Images_button/arrows.gif" alt="" name="undefined_2" width="8" height="8" class="MMArrowStyleMMMenu1130101326_0" id="undefined_2" /> </a> <a href="bpmproduct4.html" target="_self" id="MMMenu1130101326_0_Item_2" class="MMMIVStyleMMMenu1130101326_0" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0');"> eFDoc </a> </div>
+                <div id="MMMenu1130101326_0_1" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="bpmproduct2-1.html" target="_self" id="MMMenu1130101326_0_1_Item_0" class="MMMIFVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> Power&nbsp;Process&nbsp;BPM </a> <a href="bpmproduct2-2.html" target="_self" id="MMMenu1130101326_0_1_Item_1" class="MMMIVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> Power&nbsp;webForm </a> <a href="bpmproduct2-3.html" target="_self" id="MMMenu1130101326_0_1_Item_2" class="MMMIVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> SignFlow&nbsp;for&nbsp;Power&nbsp;Process </a> <a href="bpmproduct2-4.html" target="_self" id="MMMenu1130101326_0_1_Item_3" class="MMMIVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> Enterprise&nbsp;Manager </a> <a href="bpmproduct2-5.html" target="_self" id="MMMenu1130101326_0_1_Item_4" class="MMMIVStyleMMMenu1130101326_0_1" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_1');"> Portlets&nbsp;for&nbsp;Portal </a> </div>
+                <div id="MMMenu1130101326_0_2" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="bpmproduct3-1.html" target="_self" id="MMMenu1130101326_0_2_Item_0" class="MMMIFVStyleMMMenu1130101326_0_2" onmouseover="MM_menuOverMenuItem('MMMenu1130101326_0_2');"> Power&nbsp;Link&nbsp;on&nbsp;Demand </a> </div>
+              </div>
+        </div></td>
+        <td width="100" background="Images_button/m1.gif"><div id="FWTableContainer1371397121"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu2','../Images_button/menu2_f3.gif',1);" onmouseover="MM_nbGroup('over','menu2','../Images_button/menu2_f2.gif','../Images_button/menu2_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu2" src="../Images_button/menu2.gif" width="100" height="22" border="0" id="menu2" usemap="#m_menu2" alt="" /></a>
+              <map name="m_menu2" id="m_menu2">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="solutions.html" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1109144100_0', 'MMMenu1109144100_0',0,23,'menu2');"  />
+              </map>
+              <div id="MMMenuContainer1109144100_0">
+                <div id="MMMenu1109144100_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="solutions2.html" target="_self" id="MMMenu1109144100_0_Item_0" class="MMMIFVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Inventory&nbsp;Management&nbsp;Solution </a> <a href="solutions3.html" target="_self" id="MMMenu1109144100_0_Item_1" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Human&nbsp;Resource&nbsp;Management&nbsp;Solution </a> <a href="solutions4.html" target="_self" id="MMMenu1109144100_0_Item_2" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> B2B&nbsp;Message&nbsp;Exchange&nbsp;Management&nbsp;Solution </a> <a href="solutions6.html" target="_self" id="MMMenu1109144100_0_Item_3" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Purchase&nbsp;Order&nbsp;and&nbsp;Request&nbsp;Management&nbsp;Solution </a> <a href="solutions5.html" target="_self" id="MMMenu1109144100_0_Item_4" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Office&nbsp;Automation&nbsp;Solution </a> <a href="solutions7.html" target="_self" id="MMMenu1109144100_0_Item_5" class="MMMIVStyleMMMenu1109144100_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144100_0');"> Integrated&nbsp;Online&nbsp;Application&nbsp;Services&nbsp;Solution </a> </div>
+              </div>
+        </div></td>
+        <td width="100" background="Images_button/m1.gif"><div id="FWTableContainer1608763796"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu3','../Images_button/menu3_f3.gif',1);" onmouseover="MM_nbGroup('over','menu3','../Images_button/menu3_f2.gif','../Images_button/menu3_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu3" src="../Images_button/menu3.gif" width="100" height="22" border="0" id="menu3" usemap="#m_menu3" alt="" /></a>
+              <map name="m_menu3" id="m_menu3">
+                <area shape="poly" coords="3,1,103,1,103,23,3,23,3,1" href="callcenter.html" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1109144646_0', 'MMMenu1109144646_0',0,23,'menu3');"  />
+              </map>
+              <div id="MMMenuContainer1109144646_0">
+                <div id="MMMenu1109144646_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="callcenter3.html" target="_self" id="MMMenu1109144646_0_Item_0" class="MMMIFVStyleMMMenu1109144646_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144646_0');"> Product&nbsp;Services </a> <a href="callcenter4.html" target="_self" id="MMMenu1109144646_0_Item_1" class="MMMIVStyleMMMenu1109144646_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144646_0');"> Project&nbsp;Services </a> <a href="callcenter2.html" target="_self" id="MMMenu1109144646_0_Item_2" class="MMMIVStyleMMMenu1109144646_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144646_0');"> Training&nbsp;Courses </a> </div>
+              </div>
+        </div></td>
+        <td width="100" background="Images_button/m1.gif"><div id="FWTableContainer679106656"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu4','../Images_button/menu4_f3.gif',1);" onmouseover="MM_nbGroup('over','menu4','../Images_button/menu4_f2.gif','../Images_button/menu4_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu4" src="../Images_button/menu4.gif" width="100" height="22" border="0" id="menu4" usemap="#m_menu4" alt="" /></a>
+              <map name="m_menu4" id="m_menu4">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="supports.html" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1109144931_0', 'MMMenu1109144931_0',0,23,'menu4');"  />
+              </map>
+              <div id="MMMenuContainer1109144931_0">
+                <div id="MMMenu1109144931_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="supports2.html" target="_self" id="MMMenu1109144931_0_Item_0" class="MMMIFVStyleMMMenu1109144931_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144931_0');"> Online&nbsp;Support&nbsp;Center </a> <a href="knowledge.html" target="_self" id="MMMenu1109144931_0_Item_1" class="MMMIVStyleMMMenu1109144931_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144931_0');"> BPM&nbsp;Knowleagebase </a> <a href="download.html" target="_self" id="MMMenu1109144931_0_Item_2" class="MMMIVStyleMMMenu1109144931_0" onmouseover="MM_menuOverMenuItem('MMMenu1109144931_0');"> Download </a> </div>
+              </div>
+        </div></td>
+        <td width="140" background="Images_button/m1.gif"><a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu5','../Images_button/menu5_f3.gif',1);" onmouseover="MM_nbGroup('over','menu5','../Images_button/menu5_f2.gif','../Images_button/menu5_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu5" src="../Images_button/menu5.gif" width="140" height="22" border="0" id="menu5" usemap="#m_menu5" alt="" /></a>
+          <map name="m_menu5" id="m_menu5">
+            <area shape="poly" coords="0,0,140,0,140,22,0,22,0,0" href="case.html" target="_self" alt="" onmouseout="MM_nbGroup('out');"  onmouseover="MM_nbGroup('over','menu5','../Images_button/menu5_f2.gif','../Images_button/menu5_f4.gif',1);"  onclick="MM_nbGroup('down','navbar1','menu5','../Images_button/menu5_f3.gif',1);"  />
+          </map></td>
+        <td width="95" background="Images_button/m1.gif"><div id="FWTableContainer527474741"> <a href="javascript:;" target="_top" onclick="MM_nbGroup('down','navbar1','menu6','../Images_button/menu6_f3.gif',1);" onmouseover="MM_nbGroup('over','menu6','../Images_button/menu6_f2.gif','../Images_button/menu6_f4.gif',1);" onmouseout="MM_nbGroup('out');"><img name="menu6" src="../Images_button/menu6.gif" width="100" height="22" border="0" id="menu6" usemap="#m_menu6" alt="" /></a>
+              <map name="m_menu6" id="m_menu6">
+                <area shape="poly" coords="0,0,100,0,100,22,0,22,0,0" href="abovee1.heml" target="_self" alt="" onmouseout="MM_menuStartTimeout(1000);"  onmouseover="MM_menuShowMenu('MMMenuContainer1109150254_0', 'MMMenu1109150254_0',0,23,'menu6');"  />
+              </map>
+              <div id="MMMenuContainer1109150254_0">
+                <div id="MMMenu1109150254_0" onmouseout="MM_menuStartTimeout(1000);" onmouseover="MM_menuResetTimeout();"> <a href="abovee6.html" target="_self" id="MMMenu1109150254_0_Item_0" class="MMMIFVStyleMMMenu1109150254_0" onmouseover="MM_menuOverMenuItem('MMMenu1109150254_0');"> Partners </a> <a href="../abovee7.html" target="_self" id="MMMenu1109150254_0_Item_1" class="MMMIVStyleMMMenu1109150254_0" onmouseover="MM_menuOverMenuItem('MMMenu1109150254_0');"> Contact&nbsp;Us </a> </div>
+              </div>
+        </div></td>
+      </tr>
+    </table>
+        <map name="logoMap" id="logoMap">
+          <area shape="rect" coords="863,74,880,87" href="http://www.abovee.com/englishweb/index.htm" target="_self" />
+          <area shape="rect" coords="843,74,859,87" href="http://www.abovee.com/web/guest/abovee" target="_blank" />
+          <area shape="rect" coords="822,74,841,86" href="http://www.abovee.com/web/guest/abovee" target="_blank" />
+          </map>
+    </div>
+      <map name="logoMap" id="logoMap">
+        <area shape="rect" coords="863,73,880,86" href="http://www.abovee.com/englishweb/index.htm" target="_self" />
+        <area shape="rect" coords="845,73,861,86" href="http://www.abovee.com/web/guest/abovee" target="_blank" />
+        <area shape="rect" coords="823,74,842,86" href="http://www.abovee.com/web/guest/abovee" target="_blank" />
+      </map>    </td>
+  </tr>
+  </tr>
+  
+  <tr>
+    <td width="665" valign="top">&nbsp;</td>
+    <td width="222" rowspan="2" valign="top"><table width="218" border="0" cellpadding="1" cellspacing="0">
+      <tr>
+        <td height="35" colspan="2" valign="top"><img src="../Images_button/b_e09.png" alt="" name="button_2" width="220" height="33" vspace="3" id="button_2" /></td>
+      </tr>
+      <tr>
+        <td width="80" height="10" valign="top"><div align="left" class="T6">[2005-11-25] </div></td>
+        <td width="137" height="12" valign="top"><a href="knowledge2007417.html" ></a></td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><div align="left"><a href="knowledge1_20051125.html">Using BPM as the Core to Improve   Global Logistics System</a><a href="knowledge2007417.html" class="T6"></a></div></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">&nbsp;</td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" valign="top"><div align="left">[2005-11-18] </div></td>
+        <td width="137" height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><a href="knowledge1_20051118.html">Manufactures Use BPM to Achieve   Inventory Risk Management and Decrease Unused Materials </a></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">&nbsp;</td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">[2005-11-11] </td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><a href="knowledge1_20051111.html" >Discussion of Introducing Enterprise   Class BPM </a></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">&nbsp;</td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">[2005-11-04] </td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><a href="knowledge1_20051104.html">Selecting the BPM from the Highest   Level of the Enterprise </a></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">&nbsp;</td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">[2005-10-28] </td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><a href="knowledge1_20051028.html">BPMN and BPEL</a></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">&nbsp;</td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">[2005-10-21] </td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><a href="knowledge1_20051021.html">From SOA and Web Services to POA </a></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">&nbsp;</td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">[2005-10-14] </td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+      <tr>
+        <td height="12" colspan="2" valign="top"><a href="knowledge1_20051014.html">When Modern BPM Meets SOA </a></td>
+      </tr>
+      <tr>
+        <td height="10" valign="top">&nbsp;</td>
+        <td height="12" valign="top">&nbsp;</td>
+      </tr>
+    </table>
+      <br />
+      <div align="right" class="T6"><a href="../knowledge1_2007.html" target="_self">2007</a> | <a href="../knowledge1_2005.html" target="_self">2005</a><br />
+      </div>
+      <br />
+    <table width="218" border="0" align="left" cellpadding="0" cellspacing="0">
+      <tr>
+        <td><a href="../knowledge3_2007.html" target="_self"><img src="../Images_button/b_e10.png" alt="" width="220" height="33" hspace="5" vspace="10" border="0" align="top" /></a></td>
+      </tr>
+      <tr>
+        <td><a href="../knowledge4_2006.html"" target="_self"><img src="../Images_button/b_e11.png" width="220" height="33" hspace="5" vspace="10" border="0" align="top" /></a></td>
+      </tr>
+      <tr>
+        <td><a href="../knowledge2_2006.html"" target="_self"><img src="../Images_button/b_e12.png" width="220" height="33" hspace="5" vspace="10" border="0" /></a></td>
+      </tr>
+    </table>
+    <br /></td>
+  </tr>
+  <tr>
+    <td valign="top"><table width="600" border="0" align="center" cellpadding="2" cellspacing="1">
+      <tr>
+        <td height="0"><div align="left">
+            <div align="left">
+              <div align="left">
+                <div align="left">
+                  <div align="left">
+                    <div align="left">
+                      <h3>BPM Mini Course. Class 3: Modern Business Process Management   Architecture and Technology (2 of 2) </h3>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div></td>
+      </tr>
+      
+      <tr>
+        <td><div align="left">
+            <div align="left">
+              <div align="left">
+                <div align="left">
+                  <h1><strong>BPMN and BPEL </strong></h1>
+                </div>
+                </div>
+              </div>
+            </div></td>
+      </tr>
+      
+      <tr>
+        <td><div align="justify" class="T6">
+            <div align="left">
+              <div align="left">
+                <div align="right">
+                  <div align="right">
+                    <h4 align="left">Originally Published in iThome Computer Paper, vol. 214, 2005/10/28</h4>
+                  </div>
+                  </div>
+                </div>
+            </div>
+        </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div align="justify" class="T6">
+            <div align="justify">We discussed in the previous article that some Web Services   technology and SOA architecture. Web Services provide a standard interface   protocol, enabling different systems or different companies to integrate   together. We can use the services provided by each system to build the needed   system or service. This building block combination method is what SOA aims to   achieve. Yet, is there any standard to define this combination method? </div>
+            </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr>
+        <td class="T6"><div align="justify">
+          <div align="justify">
+            <p align="justify">It has always been that programmers are comfortable with using   programming languages to control complex logic, and using Application   Programming Interfaces (API) to call external programs. Yet, in the SOA   architecture, services have become the main principle. Complex logic is being   included in the service or has been separated into different services. Therefore   to build a system, the required services must be found or generated, then last,   connect these services with simple logic. In the past, such work is usually   designed using process diagrams, then programmers are hired convert them into   programming language. But these process diagrams are only suitable for high   level design, and cannot represent, parallel processing, synchronization, events   handling, and etc. Therefore a standard for expressing processes, Business   Process Modeling Notation (BPMN), has been created. BPMN can directly describe   the process details and convert it to Business Process Execution Language (BPEL)   or directly apply it on the Business Process Management System (BPMS). </p>
+          </div>
+          </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr>
+        <td><div align="justify">
+          <div align="left">
+            <h2>What is BPMN </h2>
+          </div>
+          </div></td>
+      </tr>
+      
+      
+      <tr>
+        <td><div align="justify">
+          <div align="justify">BPMN took the Business Process Management Initiative (BPMI)   two years to develop. The official 1.0 version was released during May, 2004.   Before this, process design diagrams do not have a standard, and were defined by   process modeling companies, such as DS Sheer （ ARIS ） , ProActivity, Popkin,   Casewise, and MEGA. Or were defined by consulting companies. Also other   standards would also define some process diagrams, such the UML Activity   diagram, BPSS in ebXML, Activity-Decision Flow (ADF) diagram, and IDEF. This   situation was similar to object-oriented design before UML appeared, when many   parties have their own solutions. </div>
+        </div></td>
+      </tr>
+      
+      
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr>
+        <td><p align="justify">Since there wasn't a standardized notation and common language,   users would often have to spend quite a bit of time before being able to   understand processes that were designed with different products, which hinders   usage. For this reason, BPMI developed BPMN, with its main purpose to enable all   users to have a common language, from consultant analysts, process designers,   business managers, and maintenance engineers to easily understand and   communicate </p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr>
+        <td><div align="justify">
+          <p align="justify">BPMN unified the process diagram format and the definition of   the diagram lines. For example, a round shape notation represents an event. In   particular, round shaped notation with thin sides represents processes that have   already started while round shaped notation with think sides represents   processes that have completed. Also, as the same as the traditional process   diagram, the diamond shape represents process control, which can aside from   determining the direction of the process, but can also determine forking and   merging. The execution of a task or activity is represented by a rectangular   shape. These tasks can be in another process, referred to as a child process. </p>
+        </div></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><p align="justify">In the topic of lines, aside from the solid lines in process   connection points, there are connection points and other items, such as the   dotted line used by annotations and the broken line used to present the flow of   information. BPMN can only be applied to use in systems and the design of   internal processes; it can also be used to design inter-company and public   processes to achieve B2B integration. In this design diagram, the line   representing the flow of information can clearly represent the process and   transferring of information. Aside from the design of the flow processes,   another goal of the BPMN is to being close the distance between flow design and   execution. Thus, BPMN defines each object and the details of its corresponding   Business Process Execution Language (BPEL), so that a process design diagram can   be directly converted into an executable language. </p></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div align="left">
+          <div align="left">
+            <h2>What is BPEL (Business Process Execution Language) </h2>
+          </div>
+          </div></td>
+      </tr>
+      <tr>
+        <td><div align="justify">
+          <div align="justify">After understanding the process design diagram standard, let   us have a look at process execution language standard. In this section, the   standard is opposite with BPMN. Each standard organization and large software   company have been competing to define a process execution. This resulted in too   many standards that confuses people The standards that are related to processes   includes the XML business process LAN Guage (XLANG) by Microsoft, the Web   Services Flow Language (WSFL) by IBM, and the Web Services Conversion Language   (WSCL) by HP. The first two (XLANG and WSFL) were combined to form BPEL and was   made a standard by OASIS. WSCL evolved to become WS Choreography and was made a   standard by W 3C . Also, the BPM also created the Business Process Modeling   Language (BPML). Standard execution standards creates the ability to interflow,   reduces redundancies, reduces the learning needed by developers, and the cost of   conversion. With interflow, systems can then communicate with on another,   understand, and lower system conversion costs. With the support of major   venders, BPEL is the most widely accepted process execution standard in the   industry. </div>
+        </div>          </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      
+      <tr>
+        <td><div align="justify">BPEL coordinates services, and describes process control   mechanisms, such as forks, loops, parallel processing, information processing   and relationships, and exception processing. BPEL is a XML based language that   describes business processes to connect different web services together to   create a new solution. Comparing this combination method and the previous method   that uses programs to connect services together, the new method is more flexible   and easy to manage. Users can use the following combinations to quickly change   or create new solutions. But because BPEL over emphasizes on enabling web   services to work together, it is lacking in personnel integration and support.   Therefore, some venders have proposed the BPEL4People to make up for its   deficiencies. </div>          </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      
+
+      <tr>
+        <td><p align="justify">From a technical point of view, SOA architecture and web   services are very good design inventions. It applies the standard of the   internet and sketches the outline of the next generation software architecture.   Yet, it does not mention the methods and standards of the actual operation of   services. This article provides an overview of business process language design   and execution standards. It is hoped that the establishment of these standards   and growth can enable connecting services to become easier, and increase the   speed of development, with the goal of making it plug and use, enabling the SOA   architecture to become available on more systems. </p>          </td>
+      </tr>
+      
+    </table></td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+ <td colspan="2" background="../Images_button/890x16.png"><table width="880" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><div align="left"><span class="style1" style="text-align: left">Copyright 2000-2011 AboveE Technology Inc., All rights reserved.</span></div></td>
+        <td><div align="right" class="style1"><a href="http://www.abovee.com/englishweb_new/index.html"target="_self" class="style1">Home</a> | <a href="abovee7.html" target="_self" class="style1">Contact Us</a> |<a href="callcenter2.html" target="_self" class="style1"> Training</a></span></div></td>
+  </tr>
+    </table></td>
+  </tr>
+</table>
+<div align="left"></div>
+
+<map name="Map" id="Map">
+  <area shape="rect" coords="704,65,718,76" href="http://www.abovee.com/englishweb_new/index.html" target="_self" />
+<area shape="rect" coords="683,62,699,73" href="http://www.abovee.com/zh_CN/web/guest/abovee" target="_self" />
+<area shape="rect" coords="665,65,680,76" href="http://www.abovee.com/web/guest/abovee" target="_self" />
+</map></body>
+</html>
