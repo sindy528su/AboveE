@@ -1,0 +1,389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>Discussion of Introducing Enterprise Class BPM </title>
+<style type="text/css">
+<!--
+.t1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #003399;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+}
+body {
+	background-image: url();
+}
+a:link {
+	text-decoration: none;
+	color: #666666;
+}
+a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF9900;
+}
+a:active {
+	text-decoration: none;
+}
+.t3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+}
+.t4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #997A00;
+	font-style: normal;
+	text-transform: none;
+}
+.t2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+.t5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+}
+.t6 {font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000;
+}
+.style32 {color: #0000FF; font-size: 12pt; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
+-->
+</style>
+<script language="JavaScript">
+<!--
+function mmLoadMenus() {
+  if (window.mm_menu_0907084400_0) return;
+                          window.mm_menu_0907084400_0 = new Menu("root",250,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907084400_0.addMenuItem("Company&nbsp;Overview","location='../about1.htm'");
+  mm_menu_0907084400_0.addMenuItem("Product&nbsp;Development&nbsp;and&nbsp;Distibution&nbsp;Map","location='../about2.htm'");
+  mm_menu_0907084400_0.addMenuItem("Core&nbsp;Technology&nbsp;and&nbsp;Management&nbsp;Team","location='../about3.htm'");
+  mm_menu_0907084400_0.addMenuItem("Unique&nbsp;Competitive&nbsp;Advantages","location='../about4.htm'");
+  mm_menu_0907084400_0.addMenuItem("Awards","location='../about5.htm'");
+  mm_menu_0907084400_0.addMenuItem("Collaboration&nbsp;and&nbsp;Distribition&nbsp;Partners","location='../about6.htm'");
+   mm_menu_0907084400_0.hideOnMouseOut=true;
+   mm_menu_0907084400_0.bgColor='#FFFFFF';
+   mm_menu_0907084400_0.menuBorder=1;
+   mm_menu_0907084400_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907084400_0.menuBorderBgColor='#EAEAEA';
+  window.mm_menu_0907130905_0 = new Menu("root",250,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907130905_0.addMenuItem("Full&nbsp;Service&nbsp;BPM&nbsp;Professional&nbsp;Services","location='../BPM Product1.htm'");
+  mm_menu_0907130905_0.addMenuItem("R&D&nbsp;History","location='../BPM Product2.htm'");
+  mm_menu_0907130905_0.addMenuItem("BPM&nbsp;Product&nbsp;Family","location='../BPM Product3.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Process&nbsp;Standard&nbsp;Edition","location='../BPM Product3-1.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Process&nbsp;Cluster&nbsp;Edition&nbsp;","location='../BPM Product3-2.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;webForm","location='../BPM Product3-5.htm'");
+  mm_menu_0907130905_0.addMenuItem("SignFlow&nbsp;for&nbsp;Power&nbsp;Process","location='../BPM Product3-3.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Link/RosettaNet&nbsp;Channel&nbsp;Manager","location='../BPM Product3-4.htm'");
+   mm_menu_0907130905_0.hideOnMouseOut=true;
+   mm_menu_0907130905_0.bgColor='#FFFFFF';
+   mm_menu_0907130905_0.menuBorder=1;
+   mm_menu_0907130905_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907130905_0.menuBorderBgColor='#EAEAEA';
+  window.mm_menu_0907131331_0 = new Menu("root",200,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CCCCCC","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907131331_0.addMenuItem("BPM&nbsp;Training&nbsp;Course","location='../callcenter1.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Online&nbsp;Customer&nbsp;Service","location='../callcenter3.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Download&nbsp;Area","location='../callcenter4.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Frequently&nbsp;Asked&nbsp;Questions","location='../callcenter5.htm'");
+  mm_menu_0907131331_0.addMenuItem("Location","location='../callcenter2.jsp'");
+   mm_menu_0907131331_0.hideOnMouseOut=true;
+   mm_menu_0907131331_0.bgColor='#FFFFFF';
+   mm_menu_0907131331_0.menuBorder=1;
+   mm_menu_0907131331_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907131331_0.menuBorderBgColor='#EAEAEA';
+window.mm_menu_0907131856_0 = new Menu("root",130,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907131856_0.addMenuItem("超義新聞","location='news1.htm'");
+  mm_menu_0907131856_0.addMenuItem("電子報","location='news3.htm'");
+   mm_menu_0907131856_0.hideOnMouseOut=true;
+   mm_menu_0907131856_0.bgColor='#FFFFFF';
+   mm_menu_0907131856_0.menuBorder=1;
+   mm_menu_0907131856_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907131856_0.menuBorderBgColor='#EAEAEA';
+
+          window.mm_menu_0907132025_0 = new Menu("root",130,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907132025_0.addMenuItem("Successful&nbsp;Cases","location='../Solution1.htm'");
+  mm_menu_0907132025_0.addMenuItem("BPM&nbsp;Solution","location='../Solution2.htm'");
+   mm_menu_0907132025_0.hideOnMouseOut=true;
+   mm_menu_0907132025_0.bgColor='#FFFFFF';
+   mm_menu_0907132025_0.menuBorder=1;
+   mm_menu_0907132025_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907132025_0.menuBorderBgColor='#EAEAEA';
+
+mm_menu_0907132025_0.writeMenus();
+} // mmLoadMenus()
+//-->
+</script>
+<script language="JavaScript" src="../mm_menu.js"></script>
+</head>
+
+<body>
+<p>
+  <script language="JavaScript1.2">mmLoadMenus();</script>
+  <!--  -->
+</p>
+<table width="800" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><div align="right"><span class="t3"><a href="../index.htm">Home</a> * <a href="../webmap.htm">WebMap </a>*<a href="http://www.abovee.com/">繁體中文</a></span></div></td>
+  </tr>
+</table>
+<table width="800" align="center" cellpadding="0" cellspacing="0" class="t3">
+  <tr>
+    <td height="110" align="center" valign="top" background="../images/p2.gif">
+      <div align="center">
+        <table width="750" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><div align="center"><a href="../index.htm"><img src="../logo/abovee.gif" width="202" height="45" border="0"></a></div></td>
+            <td width="450">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="30" colspan="2">&nbsp;</td>
+          </tr>
+        </table>
+        <table width="800" height="35" align="center" cellpadding="0" cellspacing="0">
+          <tr valign="bottom">
+            <td class="t2"><div align="center"><a href="../about1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907084400_0,0,25,null,'image1')" onMouseOut="MM_startTimeout();"><img src="../button/Babout.gif" name="image1" width="150" height="25" border="0" id="image1"></a></div></td>
+            <td class="t2"><div align="center"><a href="../BPM%20Product1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907130905_0,0,25,null,'image2')" onMouseOut="MM_startTimeout();"><img src="../button/Bbpmproduct.gif" name="image2" width="187" height="25" border="0" id="image2"></a></div></td>
+            <td class="t2"><div align="center"><a href="../callcenter1.jsp" onMouseOver="MM_showMenu(window.mm_menu_0907131331_0,0,25,null,'image3')" onMouseOut="MM_startTimeout();"><img src="../button/Bcallcenter.gif" name="image3" width="150" height="25" border="0" id="image3"></a></div></td>
+            <td class="t2"><div align="center"><a href="../Solution1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907132025_0,25,25,null,'image5')" onMouseOut="MM_startTimeout();"><img src="../button/Bsolution.gif" name="image5" width="117" height="25" border="0" id="image5"></a></div></td>
+            <td class="t2"><div align="center"><a href="../knowledge1.htm"><img src="../button/Bknowledge.gif" width="190" height="25" border="0"></a></div></td>
+          </tr>
+        </table>
+    </div></td>
+  </tr>
+</table>
+<table width="800" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="../images/b3.gif" width="800" height="2"></td>
+  </tr>
+</table>
+<table width="800" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#FFFFFF" class="t3">
+  <tr valign="middle">
+    <td valign="top" class="t4">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top" class="t4"><div align="center"></div>
+        <div align="right"></div></td>
+  </tr>
+  <tr valign="middle">
+    <td><div align="center">
+        <table width="600" cellpadding="0" cellspacing="5">
+          <tr>
+            <td><div align="left"><span class="t4"> BPM Mini Course. Class 5: Practical Analysis of Introducing BPM </span></div></td>
+          </tr>
+          <tr>
+            <td class="style32"><div align="left"> Discussion of Introducing Enterprise Class BPM </div></td>
+          </tr>
+          <tr>
+            <td class="t6"><div align="right" class="t61"> Originally Published in iThome Computer Paper, vol. 216, 2005/11/11 </div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> While under the pressure of globalization in the 21 st century, businesses must continue to adjust their operations to react to the sly changes of the operating environment. This makes the role of information technology (IT) even more important. In the past 10 years, IT has changed the practice of operating a business. Whether it is in manufacturing, product strategy, sales, or customer service. The role of IT has become even more important. From the pure operational utility in the 1960~1970 to a competitive weapon in the 1990. BPMS is a competitive edge that was born under this trend. </p></td>
+          </tr>
+          <tr class="t31">
+            <td><div align="left"></div></td>
+          </tr>
+          <tr>
+            <td class="t1">
+              <div align="left"> Executing BPM Projects Requires a Professional Introduction Method </div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> According to research results from Gartner, by the year 2005, more than 90% of large enterprises would have introduced the BPM system into their organization. At the same time, iThome Computer Paper reported in its “2005 Survey of IT Purchases by the Top 2000 Companies in Taiwan” that “…enterprises that are introducing work processes or BPM projects or are planning to, make up a large portion of the surveyed enterprises, 24.5% and 27% respectively”. Therefore it can be seen that the BPM concept and solution has been gradually accepted by both domestic and foreign enterprises. Yet, the same as introducing ERP, SCM, CRM, KM, and other enterprise information systems, when introducing BPMS, businesses must face the organizational (such as changes in the daily operation processes) and technology impacts. Therefore, whether the organization is able to adapt is key to the success or failure of the project introduction. Also, interdepartmental cooperation is an important characteristic of BPM projects. As such, from the usability of the platform, as well as the start, execution, finish, and benefit evaluation of the project all require experienced service providers and enterprise IT departments, as well as close cooperation of each operations department to ensure the BPM product can be correct and effectively utilized. Tight controls of the project and process optimization all have their reasons that finally result in the goals of the enterprise. Must businesses do not understand how to introduce BPMS and run BPM projects; therefore, there is need to utilize the professional knowledge and services of BPM consultants to assist with each level of introduction. Below are my previous BPM professional experiences and are categorized by business goals and needs into IT level and strategic level projects: </p></td>
+          </tr>
+          <tr>
+            <td class="t1"><p align="left" class="t61"> IT Level Department Class BPM Projects </p></td>
+          </tr>
+          <tr class="t31">
+            <td class="t31">
+              <div align="justify">Project content and goals are clearer and mostly support operations within a single organization. There are no impacts due to organizational cultural differences and conflicts of interests. Most of the project goals emphasize improvement of efficiency, such as electronic forms projects. </div></td>
+          </tr>
+          <tr>
+            <td class="t1"><p align="left" class="t61"> Strategic Level Enterprise Class BPM Projects </p></td>
+          </tr>
+          <tr>
+            <td class="t31">
+              <div align="justify">Its purpose is to support strategic goals of the company. Its project area covers inter-organizational operations, thus support from senior level executives is a must. Also, the ability of key members to grasp and participate in the process affects the risks of the project. Therefore, whether professional BPM execution methods and strategies are used determines whether the project succeeds or not. </div></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t1">
+              <div align="left"> Steps in Introducing Enterprise Class BPM Projects </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Department level BPM projects have clear contents and goals. So even when using traditional IT project execution methods, due to its simple nature, the project can be successfully competed. Yet, in introducing enterprise class BPM projects, more cautious and professional methods are needed. </div></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t4">
+              <div align="left"> Introduction of Enterprise Class BPM Projects can be divided into the following 4 major systems and detailed task items: </div></td>
+          </tr>
+          <tr>
+            <td class="t1">
+              <div align="left">1.Planning &amp; Scoping </div></td>
+          </tr>
+          <tr class="t31">
+            <td class="t31">
+              <div align="justify">Vision Workshop: Survey the environment for opportunities and challenges, creating a common vision and strategic goal so that a proper IT system can be introduced to assist in the competitive advantage of the business. </div></td>
+          </tr>
+          <tr>
+            <td class="t31">
+              <div align="justify">Identify Processes: Identify main processes, confirm the relationship between processes, organization, and systems, while clarifying responsibilities and participants. </div></td>
+          </tr>
+          <tr>
+            <td class="t31">
+              <div align="justify">Prioritize Processes: After identifying the main processes, the main processes can be ranked in the order of importance. </div></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t1">
+              <div align="left"><span class="t61">2.Analysis &amp; Design </span><br>
+            </div></td>
+          </tr>
+          <tr>
+            <td class="t31">
+              <div align="justify">Detailed Analysis: Detailed analysis and planning of the As-Is model and To-Be model, including personnel organizational planning, confirmation and configuration of system (overall) features, system integration needs, confirmation on the types of exceptional situations with the steps to resolve it, and confirmation of performance index. <br>
+            </div></td>
+          </tr>
+          <tr>
+            <td class="t31">
+              <div align="justify">Solution Architecture: After the To-Be and system features are configured, immediately confirm the process and technology solutions framework. <br>
+            </div></td>
+          </tr>
+          <tr>
+            <td class="t31">
+              <div align="justify">Visual Prototype: Using tools to build process drafts and user interface models to use a basis for the confirmation. </div></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t1">
+              <p align="left"><span class="t61">3.Construction </span><br>
+            </p></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">BPMS Configuration: Using the demand model and technical framework to conduct a detailed system configuration, such as designing processes and configuration of the organizational information. </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="left">Components Development: Establishing the component of each unit, including user interface.</div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Integration: Through the use of EAI, API, or Web Services to closely integrate, ERP, CRM, PLM, and various different systems to maximize the benefits of “digitizing”. </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Testing: To ensure the smooth system operation and correctness of the data and processes, feature testing and user testing must be conducted. </div></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t1"><div align="left">4.Deployment </div></td>
+          </tr>
+          <tr>
+            <td><div align="left"> Deliver: System installation of end user systems and execution of training plans. </div></td>
+          </tr>
+          <tr>
+            <td><div align="left"> Enactment: Successful online operation of the system. </div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> Monitor: After the system is online, the operations and maintenance of the system is very important. Thus monitoring at regular intervals, gathering information on executing efficiency, and observe changes in KPI to use as basis to improve processes. </p></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t1"><p align="left"> <span class="t51">Participation of Customer Personnel is Key to the Success of BPM </span><br>
+            </p></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Since the purpose of strategic BPM projects is to create a key IT application system for the business. Therefore, to ensure the execution of the project can meet planning expectations and is welcomed by users from every department, effective participation by personnel assist the execution of the project and maximize its effectiveness. Below are examples for each type of person and groups involved, as well as important notices: </div></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Executive Team: Must understand the goal of the strategic BPM project is to provide operating benefits for the whole business. Therefore, the success of the project is dependent of the support and cooperation of each department. </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Managers: Must understand that the strategic BPM project supports interdepartmental operations. Not only should each manager be involved in discussions involving each managers' own department during the project, but should also be ready to support discussions at other departments because managers can also be chosen as process supervisors and is in need of support from other departments. Otherwise, the process design and planning would be very difficult to finalize. </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Subject Matter Experts (SMEs): Usually consists of personnel that are team leaders, and have the most knowledge of each corresponding individual subjects. As well, they should have significant influence among other employees in the same role. Thus, they should be able to propose the most effective needs, suggestions, and challenges related to each of their individual subjects. </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Employees: Must completely understand the effects of the resulting of BPM project on their current work methods, and what benefits are provided; then completely believe an accept it. </div></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><p align="justify"> Strategic BPM projects involve in topics not only restricted to information communication technologies (ICT), but also a common enterprise vision and establishment of the project goal, process analysis and design, organization changes, and personnel resistance all increases the projects complexity and risk. When introducing the project, a project manager that has suitable communications skills, leadership skills, and professional knowledge and ability must be selected to lead the members of the team and controlling the progress to successfully achieve the gals. Also, most companies don't understand how to introduce BPMS, therefore, there is need to utilize the professional knowledge to external consultants to assist the introduction into each level. This is why it is important to verify whether the software provider and consulting company has a professional approach to introducing such a system. </p></td>
+          </tr>
+        </table>
+    </div>
+      <div align="left"></div></td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top"><div align="right" class="t32"><a href="mailto:marketing@abovee.com">E-Mail </a> *<a href="../../callcenter3.jsp"> Online Customer Service</a> *<a href="../../callcenter2.jsp"> Location</a></div></td>
+  </tr>
+</table>
+<table width="800" height="20" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10" background="../images/p1.gif"><div align="right" class="t3">
+        <p class="t2"> Copyright 2000-2008 AboveE. All rights reserved</p>
+    </div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

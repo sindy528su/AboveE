@@ -1,0 +1,40 @@
+.pageSelected{  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; text-align: center; clip:   rect(   ); height: 20px; width: 85px; background-image: url('../images/y01.gif'); padding-top: 4px}
+.pageSelected:hover {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; text-align: center; clip:   rect(   ); height: 20px; width: 85px; background-image: url('../images/y03.gif'); padding-top: 4px}
+.pageNormal {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; text-align: center; height: 20px; width: 85px; padding-top: 4px; background-image: url('../images/y02.gif')}
+.pageNormal:hover {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; text-align: center; height: 20px; width: 85px; padding-top: 4px; background-image: url('../images/y03.gif')}
+.blackword04 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #000000; text-decoration: none}
+.loginword01 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #FFFFFF; text-decoration: none; background-image: url('../images/iii01_03.gif'); height: 20px; width: 136px; padding-top: 3px}
+.loginword01:hover {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #FFFFFF; text-decoration: none; background-image: url('../images/ii02_2_03.gif'); height: 20px; width: 136px; padding-top: 3px}
+.whiteword03 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #FFFFFF; text-decoration: none}
+.loginform01 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; color: #889DCB; text-decoration: none; height: 20px; width: 90px; border: 1px #889DCB double}
+.leftform01 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; background-image: url('../images/nnn01.gif'); height: 20px; width: 100px; text-align: center; padding-top: 5px}
+.leftform01:hover {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; background-image: url('../images/nnn02.gif'); height: 20px; width: 100px; text-align: center; padding-top: 5px}
+.titleBar {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #993333; text-decoration: none; font-weight: normal}
+.blueword01 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: 113C98; text-decoration: none}
+.blackword03_1 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px; font-style: normal; color: #666666; text-decoration: none}
+.blackword03 {  font-family: "\u65b0\u7d30\u660e\u9ad4", "Arial", "Helvetica", "sans-serif"; font-size: 12px; font-style: normal; color: #000000; text-decoration: none}
+.leftform02 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; background-image: url('../images/nnn01_1.gif'); text-align: center; height: 20px; width: 100px; padding-top: 5px}
+.leftform02:hover {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; background-image: url('../images/nnn02_2.gif'); text-align: center; height: 20px; width: 100px; padding-top: 5px}
+.whiteword01 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #FFFFFF; text-decoration: none}
+.whiteword01:hover {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #B7E3FF; text-decoration: none}
+.form04 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; background-image: url('../images/ww01.gif'); height: 20px; width: 150px; padding-top: 5px}
+.form04:hover {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; background-image: url('../images/ww02.gif'); height: 20px; width: 150px; padding-top: 5px}
+.form05 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; background-image: url('../images/ww01_1.gif'); height: 20px; width: 150px; padding-top: 5px}
+.form05:hover {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #000000; text-decoration: none; background-image: url('../images/ww02_2.gif'); height: 20px; width: 150px; padding-top: 5px}
+.whiteword02 {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 10px; color: #FFFFFF; text-decoration: none}
+.mform02 {  height: 15px; width: 100px}
+.mform02 {  }
+.mform01 {  height: 15px; width: 100px}
+.mform01 {  }
+.orangeBtn {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #003366; text-decoration: none; height: 24px; width: 70px; background-image: url('../images/orangeBtn.gif'); padding-top: 4px; clip:   rect(   )}
+.orangeBtnOver {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: blue; text-decoration: none; height: 24px; width: 70px; background-image: url('../images/banner02.gif'); padding-top: 4px; clip:   rect(   )}
+.tableTitle {  border-left:2px dotted #FFFFFF; border-right:0px dotted black; border-top:0px dotted black; border-bottom:0px dotted black; background-image: url('../images/tableTitle.gif'); font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #FFFFFF; text-decoration: none; padding-top: 2px; }
+.blueword04 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; color: #FFFFFF; background-image: url('../images/banner08.gif'); height: 24px; width: 105px; padding-top: 4px; font-size: 12px; text-decoration: none}
+.banner02 {  border-left:1px dotted #FFFFFF; border-right:0px dotted #000000; border-top:0px dotted #000000; border-bottom:0px dotted #000000; font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #666666; text-decoration: none; height: 20px; width: 650px; padding-top: 2px; background-image: url('../images/pp02_5.gif')}
+.form06 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #666666; text-decoration: none; height: 15px; width: 170px; border: 1px DEE3E7 double}
+.form07 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #666666; text-decoration: none; height: 60px; width: 340px; border: DEE3E7; border-style: double; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+.banner03 {  border-left:1px dotted #FFFFFF; border-right:0px dotted #000000; border-top:0px dotted #000000; border-bottom:0px dotted #000000; font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: 3981A5; text-decoration: none; height: 20px; width: 650px; padding-top: 2px; background-image: url('../images/pp02_5.gif'); }
+.blackword06 {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #666666; text-decoration: underline}
+.blackword06:hover {  font-family: "\u65b0\u7d30\u660e\u9ad4"; font-size: 12px; color: #3981A5; text-decoration: underline}
+.selectbox { font-size: 10px; color: #666666; background-color: #f5f5f5; border: none; font-family: "Arial", "Helvetica", "sans-serif"; }
+.submit_100 { font-size: 12px; color: lightgreen; background-color: #999999; border: 1px; border-style:outset; width: 100px; height: 19px; font-family: "Arial", "Helvetica", "sans-serif"; }

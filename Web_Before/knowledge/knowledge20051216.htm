@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>BPM Enterprise Personnel Lifecycle Management </title>
+<style type="text/css">
+<!--
+.t1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #003399;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+}
+body {
+	background-image: url();
+}
+a:link {
+	text-decoration: none;
+	color: #666666;
+}
+a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF9900;
+}
+a:active {
+	text-decoration: none;
+}
+.t3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+}
+.t4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #997A00;
+	font-style: normal;
+	text-transform: none;
+}
+.t2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+.t5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+}
+.t6 {font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000;
+}
+.style32 {color: #0000FF; font-size: 12pt; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
+.style36 {	color: #0000FF;
+	font-size: 12pt;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: normal;
+	letter-spacing: 0em;
+	word-spacing: 0em;
+}
+.t31 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0px;
+	word-spacing: 0pt;
+}
+.t61 {	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000;
+	letter-spacing: 0em;
+	word-spacing: 0em;
+}
+-->
+</style>
+<script language="JavaScript">
+<!--
+function mmLoadMenus() {
+  if (window.mm_menu_0907084400_0) return;
+                          window.mm_menu_0907084400_0 = new Menu("root",250,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907084400_0.addMenuItem("Company&nbsp;Overview","location='../about1.htm'");
+  mm_menu_0907084400_0.addMenuItem("Product&nbsp;Development&nbsp;and&nbsp;Distibution&nbsp;Map","location='../about2.htm'");
+  mm_menu_0907084400_0.addMenuItem("Core&nbsp;Technology&nbsp;and&nbsp;Management&nbsp;Team","location='../about3.htm'");
+  mm_menu_0907084400_0.addMenuItem("Unique&nbsp;Competitive&nbsp;Advantages","location='../about4.htm'");
+  mm_menu_0907084400_0.addMenuItem("Awards","location='../about5.htm'");
+  mm_menu_0907084400_0.addMenuItem("Collaboration&nbsp;and&nbsp;Distribition&nbsp;Partners","location='../about6.htm'");
+   mm_menu_0907084400_0.hideOnMouseOut=true;
+   mm_menu_0907084400_0.bgColor='#FFFFFF';
+   mm_menu_0907084400_0.menuBorder=1;
+   mm_menu_0907084400_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907084400_0.menuBorderBgColor='#EAEAEA';
+  window.mm_menu_0907130905_0 = new Menu("root",250,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907130905_0.addMenuItem("Full&nbsp;Service&nbsp;BPM&nbsp;Professional&nbsp;Services","location='../BPM Product1.htm'");
+  mm_menu_0907130905_0.addMenuItem("R&D&nbsp;History","location='../BPM Product2.htm'");
+  mm_menu_0907130905_0.addMenuItem("BPM&nbsp;Product&nbsp;Family","location='../BPM Product3.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Process&nbsp;Standard&nbsp;Edition","location='../BPM Product3-1.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Process&nbsp;Cluster&nbsp;Edition&nbsp;","location='../BPM Product3-2.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;webForm","location='../BPM Product3-5.htm'");
+  mm_menu_0907130905_0.addMenuItem("SignFlow&nbsp;for&nbsp;Power&nbsp;Process","location='../BPM Product3-3.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Link/RosettaNet&nbsp;Channel&nbsp;Manager","location='../BPM Product3-4.htm'");
+   mm_menu_0907130905_0.hideOnMouseOut=true;
+   mm_menu_0907130905_0.bgColor='#FFFFFF';
+   mm_menu_0907130905_0.menuBorder=1;
+   mm_menu_0907130905_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907130905_0.menuBorderBgColor='#EAEAEA';
+  window.mm_menu_0907131331_0 = new Menu("root",200,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CCCCCC","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907131331_0.addMenuItem("BPM&nbsp;Training&nbsp;Course","location='../callcenter1.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Online&nbsp;Customer&nbsp;Service","location='../callcenter3.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Download&nbsp;Area","location='../callcenter4.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Frequently&nbsp;Asked&nbsp;Questions","location='../callcenter5.htm'");
+  mm_menu_0907131331_0.addMenuItem("Location","location='../callcenter2.jsp'");
+   mm_menu_0907131331_0.hideOnMouseOut=true;
+   mm_menu_0907131331_0.bgColor='#FFFFFF';
+   mm_menu_0907131331_0.menuBorder=1;
+   mm_menu_0907131331_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907131331_0.menuBorderBgColor='#EAEAEA';
+window.mm_menu_0907131856_0 = new Menu("root",130,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907131856_0.addMenuItem("超義新聞","location='news1.htm'");
+  mm_menu_0907131856_0.addMenuItem("電子報","location='news3.htm'");
+   mm_menu_0907131856_0.hideOnMouseOut=true;
+   mm_menu_0907131856_0.bgColor='#FFFFFF';
+   mm_menu_0907131856_0.menuBorder=1;
+   mm_menu_0907131856_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907131856_0.menuBorderBgColor='#EAEAEA';
+
+          window.mm_menu_0907132025_0 = new Menu("root",130,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907132025_0.addMenuItem("Successful&nbsp;Cases","location='../Solution1.htm'");
+  mm_menu_0907132025_0.addMenuItem("BPM&nbsp;Solution","location='../Solution2.htm'");
+   mm_menu_0907132025_0.hideOnMouseOut=true;
+   mm_menu_0907132025_0.bgColor='#FFFFFF';
+   mm_menu_0907132025_0.menuBorder=1;
+   mm_menu_0907132025_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907132025_0.menuBorderBgColor='#EAEAEA';
+
+mm_menu_0907132025_0.writeMenus();
+} // mmLoadMenus()
+//-->
+</script>
+<script language="JavaScript" src="../mm_menu.js"></script>
+</head>
+
+<body>
+<p>
+  <script language="JavaScript1.2">mmLoadMenus();</script>
+  <!--  -->
+</p>
+<table width="800" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><div align="right"><span class="t3"><a href="../index.htm">Home</a> * <a href="../webmap.htm">WebMap </a>*<a href="http://www.abovee.com/">繁體中文</a></span></div></td>
+  </tr>
+</table>
+<table width="800" align="center" cellpadding="0" cellspacing="0" class="t3">
+  <tr>
+    <td height="110" align="center" valign="top" background="../images/p2.gif">
+      <div align="center">
+        <table width="750" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><div align="center"><a href="../index.htm"><img src="../logo/abovee.gif" width="202" height="45" border="0"></a></div></td>
+            <td width="450">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="30" colspan="2">&nbsp;</td>
+          </tr>
+        </table>
+        <table width="800" height="35" align="center" cellpadding="0" cellspacing="0">
+          <tr valign="bottom">
+            <td class="t2"><div align="center"><a href="../about1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907084400_0,0,25,null,'image1')" onMouseOut="MM_startTimeout();"><img src="../button/Babout.gif" name="image1" width="150" height="25" border="0" id="image1"></a></div></td>
+            <td class="t2"><div align="center"><a href="../BPM%20Product1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907130905_0,0,25,null,'image2')" onMouseOut="MM_startTimeout();"><img src="../button/Bbpmproduct.gif" name="image2" width="187" height="25" border="0" id="image2"></a></div></td>
+            <td class="t2"><div align="center"><a href="../callcenter1.jsp" onMouseOver="MM_showMenu(window.mm_menu_0907131331_0,0,25,null,'image3')" onMouseOut="MM_startTimeout();"><img src="../button/Bcallcenter.gif" name="image3" width="150" height="25" border="0" id="image3"></a></div></td>
+            <td class="t2"><div align="center"><a href="../Solution1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907132025_0,25,25,null,'image5')" onMouseOut="MM_startTimeout();"><img src="../button/Bsolution.gif" name="image5" width="117" height="25" border="0" id="image5"></a></div></td>
+            <td class="t2"><div align="center"><a href="../knowledge1.htm"><img src="../button/Bknowledge.gif" width="190" height="25" border="0"></a></div></td>
+          </tr>
+        </table>
+    </div></td>
+  </tr>
+</table>
+<table width="800" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="../images/b3.gif" width="800" height="2"></td>
+  </tr>
+</table>
+<table width="800" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#FFFFFF" class="t3">
+  <tr valign="middle">
+    <td valign="top" class="t4">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top" class="t4"><div align="center"></div>
+        <div align="right"></div></td>
+  </tr>
+  <tr valign="middle">
+    <td><div align="center">
+        <table width="600" cellpadding="0" cellspacing="5" class="t31">
+          <tr>
+            <td class="style36"><div align="left"> <strong>BPM Enterprise Personnel Lifecycle Management </strong> </div></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+          <tr>
+            <td><div align="right" class="t61">
+                <p>Originally Published in the Special Issue of iThome Software Technology Application 2005/12/16 By NIU, Tengwei, Project Manager of AboveE</p>
+            </div></td>
+          </tr>
+          <tr>
+            <td class="t31"><p align="left"> Basing strategic management goals enables enterprises to have a brighter future. BPM provides a strategic application value in managing personnel lifecycle management. <br>
+            </p></td>
+          </tr>
+          <tr>
+            <td>
+              <p align="justify"> The digital economy has resulting in demands on organizations that are without precedent: need to be quick and make flexible adjustments to respond to market changes. This chain reaction has also effected the management and strategic use of human resources within enterprises. Most of the manufacturing operations encountered by the author have operations within Taiwan , Hong Kong, and Mainland China . To adjust to external changes, enterprises have had to make more frequent strategic adjustments to organizational personnel to enable to enterprises in meeting its objectives. 。 </p></td>
+          </tr>
+          <tr class="t31">
+            <td><p align="left"><br>
+            </p></td>
+          </tr>
+          <tr>
+            <td class="t61">
+              <p align="left" class="t51"> Utilizing BPM to Solve the Problem of Managing Personnel Lifecycles </p></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> The execution structure of organizational restructuring first starts with planning the vision and strategy as the basis for allocating resources and a direction to work towards by all members of the organization. Then through new strategies, by applying the 4 Rs: Re-position (repositioning of enterprise), Re-structure (adjusting the organizational structure), Re-system (adjusting the process and management mechanism) and Re-vitalization (adjusting the organizational culture), to conduct organizational transformation. This is the main part of organizational transformation. </p></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><p align="justify"> At the same time, through the BPM system and establishment of processes, senior management can now more effectively analyze information and through the development of human resource assets to successfully convert thinking patterns and energizing the organization that would achieve the goal of increasing enterprise competitiveness. As mentioned by Jim Collins, author of “from A to A+”, the strategy of outstanding enterprises is to continuously infuse the company with new talent and eliminate unsuitable personnel so the enterprise can develop a bright future and find its new direction, new vision, and new strategy. Therefore in an information age, enterprises must transform human resource management processes to electronic processes. Only after digitizing the information of people would it be possible to develop and utilize human resources and to strengthen the value of human productivity. In other words, the mission of human resource departments must expand from just routine work, such as recording absence, and calculating and distributing salary, to being able to maintain up-to-date and timely information about personnel. This information can then be applied and circulated with enterprise competitive strategy. The largest challenge facing these changes is how to use the least amount of resources to complete more work and using the complete and analyzed information as basis to plan human resource strategy. Therefore, enterprise personnel lifecycle management has become more important and after analysis consists of the following: management of the human resource budget, application to increase or decrease personnel, recruiting personnel, hiring of personnel, evaluation of personnel during the trial period, personnel adjustments, leave without pay, and termination application processes. Aside from maintaining basic employee information, information should be maintained on the company assets held by each personnel, system access rights must also be adjusted when there are personnel adjustments, and must need to synchronize data other companies. There may also even be need to generate strategic information reports to satisfy the needs of senior management. </p></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t61">
+              <div align="right" class="t51">
+                <p align="left"> Traditional Workflow Solution </p>
+            </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">Since enterprise personnel lifecycle management consists of many processes that need to be managed. If documents are transferred by hand, it would waste time and energy, as well as not being able to track the status of the documents. The Workflow solution can provide an electronic document solution as well as an authorization and management mechanism to meet the basic needs of electronic process solutions. </div></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> Using the management human resource budgeting and applications to increase or decrease human resources. The logic of the process can be designed using WorkFlow design tools to plan the authorization process needed and represent it in a graphical format. If needed, the processor can dynamically modify the signing process. </p></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> The processes used in these forms may be simple or complex. Traditional WorksFlow design tools, uses documents as the core concept to apply to the design of processes. It can even use field value as the selection condition in process design. The emphasis is on coordination of personnel involved and transmitting documents. Other powerful document attachment features are included to supplement the needs of the form, while the system architecture is based on Fat Client architecture to develop a powerful controllable application program. Advanced WorkFlow can provide a web based design to allow processing of documents anywhere and not just restricted to the Intranet. To meet the requirements of this rapidly changing environment, version management of forms, version management of organizational diagrams, deputy/agent personnel, reminder of deadlines, handling missed deadlines, and process tracking. In managing personnel lifecycles, the WorkFlow solution can provide a good method for each application and approval process. </p></td>
+          </tr>
+          <tr class="t31">
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t61"><p align="left" class="t51"> Problems Faced by Traditional WorkFlow </p></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> In managing enterprise personnel lifecycles, the WorkFlow solution is faced with a bottleneck. When human resource requests that were proposed are approved, the human resource department needs to search for candidates in job banks and recruiting systems based on the information on the human resource requests, then arranging interviews. After that, there are a series of interview and evaluation processes. The WorkFlow solution does not support integration with other systems from job banks, recruiting systems, or any other external system. Therefore, the information and process cannot be linked from start to end. This reflects the fact that the WorkFlow system emphasizes on document exchanges and not information exchanges. </p></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> In complex business environments, WorkFlow often does not have the ability to process unexpected events and is difficult to track the changes made to the document during the process. The document data does not support quick search and analysis; therefore, the course of the process cannot be accumulated and cannot be used in the future to analyze efficiency. </p></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">From an information technology point of view, the following diagram can explain the difference between WorkFlow and the currently most popular BPM. WorkFlow only provides P2P capabilities while BPM provides strong integration abilities such as the coordination of the A 2A (Application-to-Application), P2P (People-to-People), A2P (Application-to-People) and P 2A (People-to- Application) features. </div></td>
+          </tr>
+          <tr class="t31">
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t61">
+              <div align="left"> The BPM Solution </div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> When faced with enterprise personnel lifecycle management, the BPM solution provides a complete process based on business procedures that can completely solve the deficiencies in WorkFlow. </p></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> BPM architecture is based on data and control. It focuses on the information needed to complete the tasks and creating information after the task is completed. One of the specialties of BPM is that processes can consist of joint operations; a process can be inserted into another process, effectively becoming the child process of another process. While managing enterprise personnel life cycles, termination, and leave without pay process all includes a process to transfer current tasks to other personnel. Also, BPM can integrate various interfaces, such as the personnel interview personnel can exchange information with systems from external job banks under the SOA, making BPM a reusable integration tool. </p></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><p align="justify"> BPM system contact points can be extended to the initiator of needs, starting from the generation of information, management control and tracking is also started to reduce human error. Using the diagram below as an example, the BPM and portal are integrated, forming an information source gateway. For the average user, this makes it easier to obtain information as defined by access rights to be divided. Also, the BPM process and information being transferred is stored in the data. Therefore, it can support future benefit analysis and integrate information from existing information assets while re-enforcing approval information contents. When comparing object orientation and WorkFlow, when BPM is applied to the web, information integration can be integrated with the web in a relative easy manner so that information needed to make the decision appears immediately while reducing the need for attachments while the inability to search in documents for the required information. Though time management, work order notice, reminders, and escalation methods. So employees cannot neglect the work needed making processes traceable with no problems. </p></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><p align="justify"> With the properties of BPM, deploying enterprise personnel lifecycle management, can not only meet the needs of the enterprise, it can also provides flexible process architecture, reducing the changes in process operations, and time needed for system changes, quickly reflecting the needs of the enterprise and not the enterprise having to adapt to the system. This a solution based entirely on the business process logic of the enterprise. </p></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t61"><p align="left" class="t51"> Human Resource Asset Needs Leads BPM </p></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> In today's knowledge economy, enterprise human resource structures have had to make obvious changes, with knowledge workers comprising an increasing portion of the total workforce of organizations. The main assets of enterprises that traditionally included land, machine, and material are changing to include human resource assets comprised of knowledge workers. The degree of individual wisdom of knowledge workers being converted assets of the organization determines the competitive strength of enterprise. Faced with a challenging business environment, this article shares a BPM solution deployed on a SOA and Web Services technologies. It is hoped that it can provide HR and IR management the use of ITS information tools to asset the management of employee lifecycles rather than the traditional WorkFlow methodology. </p></td>
+          </tr>
+        </table>
+    </div>
+      <div align="left"></div></td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top"><div align="right" class="t32"><a href="mailto:marketing@abovee.com">E-Mail </a> *<a href="../../callcenter3.jsp"> Online Customer Service</a> *<a href="../../callcenter2.jsp"> Location</a></div></td>
+  </tr>
+</table>
+<table width="800" height="20" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10" background="../images/p1.gif"><div align="right" class="t3">
+        <p class="t2"> Copyright 2000-2008 AboveE. All rights reserved</p>
+    </div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>

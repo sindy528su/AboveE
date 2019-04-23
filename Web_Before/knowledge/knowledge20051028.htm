@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<title>BPMN and BPEL </title>
+<style type="text/css">
+<!--
+.t1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #003399;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+}
+body {
+	background-image: url();
+}
+a:link {
+	text-decoration: none;
+	color: #666666;
+}
+a:visited {
+	text-decoration: none;
+	color: #666666;
+}
+a:hover {
+	text-decoration: none;
+	color: #FF9900;
+}
+a:active {
+	text-decoration: none;
+}
+.t3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: normal;
+	color: #666666;
+	letter-spacing: 0px;
+	word-spacing: 0px;
+}
+.t4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: normal;
+	color: #997A00;
+	font-style: normal;
+	text-transform: none;
+}
+.t2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	color: #FFFFFF;
+}
+.t5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	line-height: 12px;
+	font-weight: normal;
+	color: #FFFFFF;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+}
+.t6 {font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: normal;
+	font-weight: bold;
+	color: #000000;
+}
+.style32 {color: #0000FF; font-size: 12pt; font-family: Verdana, Arial, Helvetica, sans-serif; font-weight: bold; }
+-->
+</style>
+<script language="JavaScript">
+<!--
+function mmLoadMenus() {
+  if (window.mm_menu_0907084400_0) return;
+                          window.mm_menu_0907084400_0 = new Menu("root",250,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907084400_0.addMenuItem("Company&nbsp;Overview","location='../about1.htm'");
+  mm_menu_0907084400_0.addMenuItem("Product&nbsp;Development&nbsp;and&nbsp;Distibution&nbsp;Map","location='../about2.htm'");
+  mm_menu_0907084400_0.addMenuItem("Core&nbsp;Technology&nbsp;and&nbsp;Management&nbsp;Team","location='../about3.htm'");
+  mm_menu_0907084400_0.addMenuItem("Unique&nbsp;Competitive&nbsp;Advantages","location='../about4.htm'");
+  mm_menu_0907084400_0.addMenuItem("Awards","location='../about5.htm'");
+  mm_menu_0907084400_0.addMenuItem("Collaboration&nbsp;and&nbsp;Distribition&nbsp;Partners","location='../about6.htm'");
+   mm_menu_0907084400_0.hideOnMouseOut=true;
+   mm_menu_0907084400_0.bgColor='#FFFFFF';
+   mm_menu_0907084400_0.menuBorder=1;
+   mm_menu_0907084400_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907084400_0.menuBorderBgColor='#EAEAEA';
+  window.mm_menu_0907130905_0 = new Menu("root",250,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907130905_0.addMenuItem("Full&nbsp;Service&nbsp;BPM&nbsp;Professional&nbsp;Services","location='../BPM Product1.htm'");
+  mm_menu_0907130905_0.addMenuItem("R&D&nbsp;History","location='../BPM Product2.htm'");
+  mm_menu_0907130905_0.addMenuItem("BPM&nbsp;Product&nbsp;Family","location='../BPM Product3.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Process&nbsp;Standard&nbsp;Edition","location='../BPM Product3-1.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Process&nbsp;Cluster&nbsp;Edition&nbsp;","location='../BPM Product3-2.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;webForm","location='../BPM Product3-5.htm'");
+  mm_menu_0907130905_0.addMenuItem("SignFlow&nbsp;for&nbsp;Power&nbsp;Process","location='../BPM Product3-3.htm'");
+  mm_menu_0907130905_0.addMenuItem("Power&nbsp;Link/RosettaNet&nbsp;Channel&nbsp;Manager","location='../BPM Product3-4.htm'");
+   mm_menu_0907130905_0.hideOnMouseOut=true;
+   mm_menu_0907130905_0.bgColor='#FFFFFF';
+   mm_menu_0907130905_0.menuBorder=1;
+   mm_menu_0907130905_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907130905_0.menuBorderBgColor='#EAEAEA';
+  window.mm_menu_0907131331_0 = new Menu("root",200,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CCCCCC","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907131331_0.addMenuItem("BPM&nbsp;Training&nbsp;Course","location='../callcenter1.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Online&nbsp;Customer&nbsp;Service","location='../callcenter3.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Download&nbsp;Area","location='../callcenter4.jsp'");
+  mm_menu_0907131331_0.addMenuItem("Frequently&nbsp;Asked&nbsp;Questions","location='../callcenter5.htm'");
+  mm_menu_0907131331_0.addMenuItem("Location","location='../callcenter2.jsp'");
+   mm_menu_0907131331_0.hideOnMouseOut=true;
+   mm_menu_0907131331_0.bgColor='#FFFFFF';
+   mm_menu_0907131331_0.menuBorder=1;
+   mm_menu_0907131331_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907131331_0.menuBorderBgColor='#EAEAEA';
+window.mm_menu_0907131856_0 = new Menu("root",130,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907131856_0.addMenuItem("超義新聞","location='news1.htm'");
+  mm_menu_0907131856_0.addMenuItem("電子報","location='news3.htm'");
+   mm_menu_0907131856_0.hideOnMouseOut=true;
+   mm_menu_0907131856_0.bgColor='#FFFFFF';
+   mm_menu_0907131856_0.menuBorder=1;
+   mm_menu_0907131856_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907131856_0.menuBorderBgColor='#EAEAEA';
+
+          window.mm_menu_0907132025_0 = new Menu("root",130,22,"Arial, Helvetica, sans-serif",12,"#000000","#ED9612","#CECECE","#FFFFFF","left","middle",5,0,800,-5,7,true,true,true,0,false,false);
+  mm_menu_0907132025_0.addMenuItem("Successful&nbsp;Cases","location='../Solution1.htm'");
+  mm_menu_0907132025_0.addMenuItem("BPM&nbsp;Solution","location='../Solution2.htm'");
+   mm_menu_0907132025_0.hideOnMouseOut=true;
+   mm_menu_0907132025_0.bgColor='#FFFFFF';
+   mm_menu_0907132025_0.menuBorder=1;
+   mm_menu_0907132025_0.menuLiteBgColor='#FFFFFF';
+   mm_menu_0907132025_0.menuBorderBgColor='#EAEAEA';
+
+mm_menu_0907132025_0.writeMenus();
+} // mmLoadMenus()
+//-->
+</script>
+<script language="JavaScript" src="../mm_menu.js"></script>
+</head>
+
+<body>
+<p>
+  <script language="JavaScript1.2">mmLoadMenus();</script>
+  <!--  -->
+</p>
+<table width="800" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><div align="right"><span class="t3"><a href="../index.htm">Home</a> * <a href="../webmap.htm">WebMap </a>*<a href="http://www.abovee.com/">繁體中文</a></span></div></td>
+  </tr>
+</table>
+<table width="800" align="center" cellpadding="0" cellspacing="0" class="t3">
+  <tr>
+    <td height="110" align="center" valign="top" background="../images/p2.gif">
+      <div align="center">
+        <table width="750" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><div align="center"><a href="../index.htm"><img src="../logo/abovee.gif" width="202" height="45" border="0"></a></div></td>
+            <td width="450">&nbsp;</td>
+          </tr>
+          <tr>
+            <td height="30" colspan="2">&nbsp;</td>
+          </tr>
+        </table>
+        <table width="800" height="35" align="center" cellpadding="0" cellspacing="0">
+          <tr valign="bottom">
+            <td class="t2"><div align="center"><a href="../about1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907084400_0,0,25,null,'image1')" onMouseOut="MM_startTimeout();"><img src="../button/Babout.gif" name="image1" width="150" height="25" border="0" id="image1"></a></div></td>
+            <td class="t2"><div align="center"><a href="../BPM%20Product1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907130905_0,0,25,null,'image2')" onMouseOut="MM_startTimeout();"><img src="../button/Bbpmproduct.gif" name="image2" width="187" height="25" border="0" id="image2"></a></div></td>
+            <td class="t2"><div align="center"><a href="../callcenter1.jsp" onMouseOver="MM_showMenu(window.mm_menu_0907131331_0,0,25,null,'image3')" onMouseOut="MM_startTimeout();"><img src="../button/Bcallcenter.gif" name="image3" width="150" height="25" border="0" id="image3"></a></div></td>
+            <td class="t2"><div align="center"><a href="../Solution1.htm" onMouseOver="MM_showMenu(window.mm_menu_0907132025_0,25,25,null,'image5')" onMouseOut="MM_startTimeout();"><img src="../button/Bsolution.gif" name="image5" width="117" height="25" border="0" id="image5"></a></div></td>
+            <td class="t2"><div align="center"><a href="../knowledge1.htm"><img src="../button/Bknowledge.gif" width="190" height="25" border="0"></a></div></td>
+          </tr>
+        </table>
+    </div></td>
+  </tr>
+</table>
+<table width="800" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="../images/b3.gif" width="800" height="2"></td>
+  </tr>
+</table>
+<table width="800" border="0" align="center" cellpadding="1" cellspacing="0" bgcolor="#FFFFFF" class="t3">
+  <tr valign="middle">
+    <td valign="top" class="t4">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top" class="t4"><div align="center"></div>
+        <div align="right"></div></td>
+  </tr>
+  <tr valign="middle">
+    <td><div align="center">
+        <table width="600" cellpadding="0" cellspacing="5" class="t31">
+          <tr class="t41">
+            <td class="t4"><div align="left"> BPM Mini Course. Class 3: Modern Business Process Management Architecture and Technology (2 of 2) </div></td>
+          </tr>
+          <tr>
+            <td class="style32"><div align="left"> <strong>BPMN and BPEL </strong> </div></td>
+          </tr>
+          <tr>
+            <td class="t6"><div align="right" class="t61"> Originally Published in iThome Computer Paper, vol. 214, 2005/10/28 </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">We discussed in the previous article that some Web Services technology and SOA architecture. Web Services provide a standard interface protocol, enabling different systems or different companies to integrate together. We can use the services provided by each system to build the needed system or service. This building block combination method is what SOA aims to achieve. Yet, is there any standard to define this combination method? </div></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td><p align="justify"> It has always been that programmers are comfortable with using programming languages to control complex logic, and using Application Programming Interfaces (API) to call external programs. Yet, in the SOA architecture, services have become the main principle. Complex logic is being included in the service or has been separated into different services. Therefore to build a system, the required services must be found or generated, then last, connect these services with simple logic. In the past, such work is usually designed using process diagrams, then programmers are hired convert them into programming language. But these process diagrams are only suitable for high level design, and cannot represent, parallel processing, synchronization, events handling, and etc. Therefore a standard for expressing processes, Business Process Modeling Notation (BPMN), has been created. BPMN can directly describe the process details and convert it to Business Process Execution Language (BPEL) or directly apply it on the Business Process Management System (BPMS). </p></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t1">
+              <div align="left"> What is BPMN </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">BPMN took the Business Process Management Initiative (BPMI) two years to develop. The official 1.0 version was released during May, 2004. Before this, process design diagrams do not have a standard, and were defined by process modeling companies, such as DS Sheer （ ARIS ） , ProActivity, Popkin, Casewise, and MEGA. Or were defined by consulting companies. Also other standards would also define some process diagrams, such the UML Activity diagram, BPSS in ebXML, Activity-Decision Flow (ADF) diagram, and IDEF. This situation was similar to object-oriented design before UML appeared, when many parties have their own solutions. </div></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> Since there wasn't a standardized notation and common language, users would often have to spend quite a bit of time before being able to understand processes that were designed with different products, which hinders usage. For this reason, BPMI developed BPMN, with its main purpose to enable all users to have a common language, from consultant analysts, process designers, business managers, and maintenance engineers to easily understand and communicate </p></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> BPMN unified the process diagram format and the definition of the diagram lines. For example, a round shape notation represents an event. In particular, round shaped notation with thin sides represents processes that have already started while round shaped notation with think sides represents processes that have completed. Also, as the same as the traditional process diagram, the diamond shape represents process control, which can aside from determining the direction of the process, but can also determine forking and merging. The execution of a task or activity is represented by a rectangular shape. These tasks can be in another process, referred to as a child process. </p></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> In the topic of lines, aside from the solid lines in process connection points, there are connection points and other items, such as the dotted line used by annotations and the broken line used to present the flow of information. BPMN can only be applied to use in systems and the design of internal processes; it can also be used to design inter-company and public processes to achieve B2B integration. In this design diagram, the line representing the flow of information can clearly represent the process and transferring of information. Aside from the design of the flow processes, another goal of the BPMN is to being close the distance between flow design and execution. Thus, BPMN defines each object and the details of its corresponding Business Process Execution Language (BPEL), so that a process design diagram can be directly converted into an executable language. </p></td>
+          </tr>
+          <tr>
+            <td class="t31">&nbsp;</td>
+          </tr>
+          <tr>
+            <td class="t1">
+              <div align="left"> What is BPEL (Business Process Execution Language) </div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">After understanding the process design diagram standard, let us have a look at process execution language standard. In this section, the standard is opposite with BPMN. Each standard organization and large software company have been competing to define a process execution. This resulted in too many standards that confuses people The standards that are related to processes includes the XML business process LAN Guage (XLANG) by Microsoft, the Web Services Flow Language (WSFL) by IBM, and the Web Services Conversion Language (WSCL) by HP. The first two (XLANG and WSFL) were combined to form BPEL and was made a standard by OASIS. WSCL evolved to become WS Choreography and was made a standard by W 3C . Also, the BPM also created the Business Process Modeling Language (BPML). Standard execution standards creates the ability to interflow, reduces redundancies, reduces the learning needed by developers, and the cost of conversion. With interflow, systems can then communicate with on another, understand, and lower system conversion costs. With the support of major venders, BPEL is the most widely accepted process execution standard in the industry. </div></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td>
+              <div align="justify">BPEL coordinates services, and describes process control mechanisms, such as forks, loops, parallel processing, information processing and relationships, and exception processing. BPEL is a XML based language that describes business processes to connect different web services together to create a new solution. Comparing this combination method and the previous method that uses programs to connect services together, the new method is more flexible and easy to manage. Users can use the following combinations to quickly change or create new solutions. But because BPEL over emphasizes on enabling web services to work together, it is lacking in personnel integration and support. Therefore, some venders have proposed the BPEL4People to make up for its deficiencies. </div></td>
+          </tr>
+          <tr>
+            <td class="t31"><div align="justify"></div></td>
+          </tr>
+          <tr>
+            <td><p align="justify"> From a technical point of view, SOA architecture and web services are very good design inventions. It applies the standard of the internet and sketches the outline of the next generation software architecture. Yet, it does not mention the methods and standards of the actual operation of services. This article provides an overview of business process language design and execution standards. It is hoped that the establishment of these standards and growth can enable connecting services to become easier, and increase the speed of development, with the goal of making it plug and use, enabling the SOA architecture to become available on more systems. </p></td>
+          </tr>
+        </table>
+    </div>
+      <div align="left"></div></td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top">&nbsp;</td>
+  </tr>
+  <tr valign="middle">
+    <td valign="top"><div align="right" class="t32"><a href="mailto:marketing@abovee.com">E-Mail </a> *<a href="../../callcenter3.jsp"> Online Customer Service</a> *<a href="../../callcenter2.jsp"> Location</a></div></td>
+  </tr>
+</table>
+<table width="800" height="20" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="10" background="../images/p1.gif"><div align="right" class="t3">
+        <p class="t2"> Copyright 2000-2008 AboveE. All rights reserved</p>
+    </div></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</body>
+</html>
